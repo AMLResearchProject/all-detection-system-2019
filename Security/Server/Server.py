@@ -99,45 +99,44 @@ def Inference():
     ServerResponse = None
 
     # Processes the image looking for faces
-    Faces = Server.Facenet.ProcessFrame(np.fromstring(request.data, np.uint8))
- 
-    if len(Faces) != 0:
-        # Loops through processed known images
-        for Known in Server.Facenet.Known:
-            
-            # Times the classification process
-            humanInferStart, computerInferStart = Server.Helpers.timerStart()
-            Match, Confidence = Server.Facenet.Compare(Known["Score"], Server.Facenet.Infer(Faces[0], Server.Movidius.Graph))
-            humanInferEnd, computerInferEnd, humanInferTime = Server.Helpers.timerEnd(computerInferStart)
+    Frame = Server.Facenet.ProcessFrame(np.fromstring(request.data, np.uint8))
+    
+    # Loops through processed known images
+    for Known in Server.Facenet.Known:
+        
+        # Times the classification process
+        humanInferStart, computerInferStart = Server.Helpers.timerStart()
+        Match, Confidence = Server.Facenet.Compare(Known["Score"], Server.Facenet.Infer(Frame, Server.Movidius.Graph))
+        humanInferEnd, computerInferEnd, humanInferTime = Server.Helpers.timerEnd(computerInferStart)
 
-            Message = ""
+        Message = ""
 
-            if Match is True: 
-                Human = os.path.splitext(Known["File"])[0]
-                Message = "Identified " + Human + " with confidence " + str(Confidence) + " in " + str(computerInferStart - computerInferEnd)
-                ServerResponse =  jsonpickle.encode({
-                                                    'Response': 'KNOWN',
-                                                    'Image': Known["File"],
-                                                    'Classification': Human,
-                                                    'Confidence': Confidence,
-                                                    'Message': Message
-                                                })
-            else:
-                Message = "Identified INTRUDER with confidence " + str(Confidence) + " in " + str(computerInferStart - computerInferEnd)
-                ServerResponse =  jsonpickle.encode({
-                                                    'Response': 'KNOWN',
-                                                    'Image': Known["File"],
-                                                    'Classification': Human,
-                                                    'Confidence': Confidence,
-                                                    'Message': Message
-                                                })
+        if Match is True: 
+            Human = os.path.splitext(Known["File"])[0]
+            Message = "Identified " + Human + " with confidence " + str(Confidence) + " in " + str(computerInferStart - computerInferEnd)
+            ServerResponse =  jsonpickle.encode({
+                                                'Response': 'KNOWN',
+                                                'Image': Known["File"],
+                                                'Classification': Human,
+                                                'Confidence': Confidence,
+                                                'Message': Message
+                                            })
+        else:
+            Message = "Identified INTRUDER with confidence " + str(Confidence) + " in " + str(computerInferStart - computerInferEnd)
+            ServerResponse =  jsonpickle.encode({
+                                                'Response': 'KNOWN',
+                                                'Image': Known["File"],
+                                                'Classification': Human,
+                                                'Confidence': Confidence,
+                                                'Message': Message
+                                            })
 
-            Server.Helpers.logMessage(Server.LogFile,
-                                        "TASS Server",
-                                        "CLASSIFICATION",
-                                        Message)
+        Server.Helpers.logMessage(Server.LogFile,
+                                    "TASS Server",
+                                    "CLASSIFICATION",
+                                    Message)
 
-            return Response(response=ServerResponse, status=200, mimetype="application/json") 
+        return Response(response=ServerResponse, status=200, mimetype="application/json") 
 
     else:
 

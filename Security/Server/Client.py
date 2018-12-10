@@ -99,6 +99,7 @@ class Client():
         for test in os.listdir(testingDir):
             if os.path.splitext(test)[1] in self.Configuration.Classifier["ValidIType"]:
                 self.send(testingDir+test)
+                time.sleep(5)
 
 if __name__ == "__main__":
     

@@ -80,25 +80,12 @@ class Facenet():
         
         for validFile in os.listdir(ValidDir):
             if os.path.splitext(validFile)[1] in self.Configuration.Classifier["ValidIType"]:
-
-                frame = cv2.imread(ValidDir+validFile)
-                rawFrame = frame.copy()
-                faces = self.Detector(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), 0)
-
-                if len(faces):
-                    face = faces[0]
-                    (x, y, w, h) = face_utils.rect_to_bb(face)
-                    currentFace = rawFrame[max(0, face.top()-100): min(face.bottom()+100, 480), 
-                                            max(0, face.left()-100): min(face.right()+100, 640)]
-                    if currentFace is None:
-                        continue 
-                    self.Known.append({"File": validFile, "Score": self.Infer(currentFace, Graph)})
-
-            if len(self.Known) == 0:
-                self.Helpers.logMessage(self.LogFile,
-                                        "TASS Server",
-                                        "STATUS",
-                                        "No known images found, TASS exiting!") 
+                self.Known.append({"File": validFile, "Score": self.Infer(cv2.resize(cv2.imread(ValidDir+validFile), (640, 480)), Graph)})
+        
+        self.Helpers.logMessage(self.LogFile,
+                                "TASS Server",
+                                "STATUS",
+                                str(len(self.Known)) + " known images found.") 
 
     def ProcessFrame(self, Frame):
 
@@ -110,27 +97,18 @@ class Facenet():
 
         Known = []
 
-        Frame = imutils.resize(cv2.imdecode(Frame, cv2.IMREAD_UNCHANGED), width=640)
+        Frame = cv2.resize(cv2.imdecode(Frame, cv2.IMREAD_UNCHANGED), (640, 480)) 
         RawFrame = Frame.copy()
         Gray = cv2.cvtColor(Frame, cv2.COLOR_BGR2GRAY)
 
-        self.OpenCV.SaveFrame("Data/Captured/" + datetime.now().strftime("%Y-%m-%d") + "/" + datetime.now().strftime("%H") + "/", datetime.now().strftime('%M-%S') + ".jpg", Frame)
-        self.OpenCV.SaveFrame("Data/Captured/" + datetime.now().strftime("%Y-%m-%d") + "/" + datetime.now().strftime("%H") + "/", datetime.now().strftime('%M-%S') + "-Gray.jpg", Gray)
+        Path = "Data/Captured/" + datetime.now().strftime("%Y-%m-%d") + "/" + datetime.now().strftime("%H") + "/"
+        FileName = datetime.now().strftime('%M-%S') + ".jpg"
+        FileNameGray = datetime.now().strftime('%M-%S') + "-Gray.jpg"
 
-        Faces = self.Detector(cv2.cvtColor(Frame, cv2.COLOR_BGR2GRAY), 0)
+        self.OpenCV.SaveFrame(Path + "/" + FileName, Frame)
+        self.OpenCV.SaveFrame(Path + "/" + FileNameGray, Gray)
 
-        if len(Faces):
-            for (i, Face) in enumerate(Faces):
-                (x, y, w, h) = face_utils.rect_to_bb(Face)
-                Gray = self.addFrameFeatures(self.addFrameBB(Frame, x, y, w, h), 
-                                                face_utils.shape_to_np(self.Predictor(Gray, Face)), x, y)
-                CurrentFace = RawFrame[max(0, Face.top()-100): min(Face.bottom()+100, 480), 
-                                        max(0, Face.left()-100): min(Face.right()+100, 640)]
-                if CurrentFace is None:
-                    continue
-                Known.append(CurrentFace)
-
-        return Known
+        return Frame
 
     def LoadGraph(self):
 
