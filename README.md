@@ -2,13 +2,13 @@
 ![Peter Moss AML (Acute Myeloid Leukemia) Detection System](Media/Images/Banner-Social.jpg)
 An open source Acute Myeloid Leukemia Detection System including data management, training and running facial and image classifiers on the edge with Intel technologies.
 
-| Project  | Description |
-| ------------- | ------------- | 
-| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for managing and classifying data. Uses facial recognition for authentication. |  
-| [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | A REST API hosting an endpoint for Natural Language Understanding. Trained on knowledge of AML. | 
-| [Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Classifier") | A REST API hosting an endpoint for classifying images using Convolutional Neural Networks. |  
-| [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Security "Security") | A REST API hosting an endpoint for authentication using Siamese Neural Networks | 
-| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. |
+| Project  | Description | Status |
+| ------------- | ------------- |  ------------- | 
+| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for managing and classifying data. Uses facial recognition for authentication. | In Progress |
+| [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | A REST API hosting an endpoint for Natural Language Understanding. Trained on knowledge of AML. | In Progress | 
+| [Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Classifier") | A REST API hosting an endpoint for classifying images using Convolutional Neural Networks. | In Progress |  
+| [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Security "Security") | A REST API hosting an endpoint for authentication using Siamese Neural Networks | Complete |  
+| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | In Progress |
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
