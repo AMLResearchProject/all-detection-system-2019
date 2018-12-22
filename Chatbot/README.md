@@ -94,7 +94,7 @@ Now it is time to think about training data. In the [Model/Data/training.json](h
 Extensions are external Python classes that you can use to extend the functionality used to generate a response. Extensions should be stored in the [extensions](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot/extensions "extensions") directory.
 
 # Training Your NLU Engine
-[![Training Your NLU Engine](Media/Images/Training.png)](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Chatbot/Train.py)
+[![Training Your NLU Engine](Media/Images/TrainingShot.png)](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Chatbot/Train.py)
 
 Now everything is set up, it is time to train. The main functionality for the training process can be found in [Train.py](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Train.py "Train.py"), [Classes/Data.py](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Classes/Data.py "Classes/Data.py"), [Classes/Model.py](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Classes/Model.py "Classes/Model.py") and  [Classes/Mitie.py](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Classes/Mitie.py "Classes/Mitie.py"), the configuration for training can be found and modified in [Required/confs.json](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Required/confs.json "Required/confs.json"). If you have modified your training data, you may need to update your configuration from time to time. 
 
