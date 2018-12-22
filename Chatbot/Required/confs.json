@@ -1,0 +1,41 @@
+{
+    "aiCore":{
+        "Logs": "Logs/",
+        "FQDN": "",
+        "IP": "",
+        "Port": 5824
+    }, 
+	"NLU":{
+        "Activation": "softmax",
+        "Threshold": 0.5,
+        "TFLearn": {
+            "Logs":"Model/TFLearn",
+            "LogsLevel": 3,
+            "Path": "Model/nlu.tflearn",
+            "Data": "Model/model.json"
+        },
+        "Regression": true,
+        "FcLayers": 3,
+        "FcUnits": 32,
+        "Epochs": 5000,
+        "BatchSize": 32,
+        "ShowMetric": true,
+        "Entities": "Mitie",
+        "EntitiesDat": "Model/entities.dat",
+        "Mitie": {
+            "Threshold": 4.00,
+            "Location": "MITIE/mitielib",
+            "ModelLocation": "MITIE/MITIE-models/english/total_word_feature_extractor.dat"
+        },
+        "defaultResponses": [
+                "Sorry, I did not understand you",
+                "Sorry, could you rephrase"
+        ],
+        "repetition": [
+            {
+                "ignoreCount": 5,
+                "ignoreReset": 60
+            }
+        ]
+	}
+}  
