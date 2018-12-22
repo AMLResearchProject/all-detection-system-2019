@@ -1,5 +1,5 @@
 # Acute Myeloid Leukemia Detection System Chatbot/NLU Engine
-![Acute Myeloid Leukemia Detection System Chatbot](Media/Media/Images/security-server.jpg) 
+![Acute Myeloid Leukemia Detection System Chatbot](Media/Images/Chatbot.png) 
 
 # Introduction
 The **Acute Myeloid Leukemia Detection System Chatbot/NLU Engine** hosts a local API server that allows applications to manage training data, train the chatbot, and carry out inference. API endpoints provide access to an **NLU** classifier and the dataset. A small dataset is provided for you to build on and is based on knowledge about Acute Myeloid Leukemia. This project is used in conjunction with the 
@@ -20,21 +20,27 @@ The following is an unedited basic conversation within the capabilities provided
 upsquared@upsquared-UP-APL01:~/AML-Detection-System/Chatbot$ python3 Run.py INPUT
 2018-12-22 07:44:08|Data|INFO: Training Data Ready
 2018-12-22 07:44:08|Data|INFO: Model Data Ready
+
 >Hello
 2018-12-22 07:44:12|Human|Intent: Hello
 2018-12-22 07:44:12|GeniSys|Reponse: ('Hello', [])
+
 >What is Acute Myeloid Leukemia?
 2018-12-22 07:44:22|Human|Intent: What is Acute Myeloid Leukemia?
 2018-12-22 07:44:22|GeniSys|Reponse: Acute Myeloid Leukemia, or AML, is a rare and agressive form of Leukemia. With AML, mutated white blood cells attack and kill healthy red cells.
+
 >I was wondering if AML affects people that older more than younger people, or the other way round?
 2018-12-22 07:45:12|Human|Intent: I was wondering if AML affects people that older more than younger people, or the other way round?
 2018-12-22 07:45:12|GeniSys|Reponse: According to cancer.org, AML is generally a disease of older people and is uncommon before the age of 45. The average age of people when they are first diagnosed with AML is about 68. But AML can occur in children as well.
+
 >OK, I am interested about the Acute Myeloid Leukemia Detection System
 2018-12-22 07:45:46|Human|Intent: OK, I am interested about the Acute Myeloid Leukemia Detection System
 2018-12-22 07:45:46|GeniSys|Reponse: The AML (Acute Myeloid Leukemia) Detection System is an open source Acute Myeloid Leukemia Detection System including data management, training and running facial and image classifiers on the edge with Intel technologies. The project includes an Android chatbot app, a natural language understanding engine, a convolutional neural network classifier, a siamese neural network classifier and  a locally hosted web based UI.
+
 >Ah, what is the AML Research Project?
 2018-12-22 07:47:53|Human|Intent: Ah, what is the AML Research Project?
 2018-12-22 07:47:53|GeniSys|Reponse: The Acute Myeloid Leukemia AI Research Project is an open source project researching and developing Artificial Intelligence for early detection of AML and for drug discovery.
+
 >Thanks
 2018-12-22 07:47:58|Human|Intent: Thanks
 2018-12-22 07:47:58|GeniSys|Reponse: No problem! Glad I could help!
@@ -122,14 +128,14 @@ If you have looked through the example dataset, you may notice that **I was wond
 
 You can see that although **I was wondering if AML affects people that older more than younger people, or the other way round?** is not in the training data, the AI was still able to classify and respond correctly. 
 
-# Communicating with your AI Via The Internet
+# Inference Via The HTTP Requests
 You can run the Run program in server mode to fire up an API endpoint that allows you to do inference via HTTP calls. To start your NLU engine in server mode, you can enter the following commands into terminal:
 
 ```
  $ python3 run.py SERVER
 ```
 
-you will now be able to access your NLU by posting to http://YourDomain:YourPort/infer, to do this, I provided an an API client programmed in Python which takes your input from console and sends it to the server for processing: [Acute Myeloid Leukemia Detection System Chatbot Client](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Chatbot/Client.py "Acute Myeloid Leukemia Detection System Chatbot Client").
+You will now be able to access your NLU by posting to http://YourDomain:YourPort/infer, to do this, I provided an an API client programmed in Python which takes your input from console and sends it to the server for processing: [Acute Myeloid Leukemia Detection System Chatbot Client](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/Chatbot/Client.py "Acute Myeloid Leukemia Detection System Chatbot Client").
 
 Navigate to the project root and execute the following command to send a query to your NLU engine, you can use any question or statement, but bear in mind it must be within the boundaries of variations of the training date.
 
