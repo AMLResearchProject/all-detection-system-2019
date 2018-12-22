@@ -1,5 +1,5 @@
 # Acute Myeloid Leukemia Detection System Chatbot/NLU Engine
-![Acute Myeloid Leukemia Detection System Chatbot](Media/Images/Chatbot.png) 
+![Acute Myeloid Leukemia Detection System Chatbot/NLU Engine](Media/Images/Chatbot.png) 
 
 # Introduction
 The **Acute Myeloid Leukemia Detection System Chatbot/NLU Engine** hosts a local API server that allows applications to manage training data, train the chatbot, and carry out inference. API endpoints provide access to an **NLU** classifier and the dataset. A small dataset is provided for you to build on and is based on knowledge about Acute Myeloid Leukemia. This project is used in conjunction with the 
