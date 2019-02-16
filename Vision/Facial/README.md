@@ -80,7 +80,7 @@ You will need to clone this repository to a location on both your development ma
   $ git clone https://github.com/AMLResearchProject/AML-Detection-System.git
 ```
 
-Once you have the repo, you will find the related files in the [Security/Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision/Facial "Security/Server") directory.
+Once you have the repo, you will find the related files in the [Vision/Facial](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision/Facial "Vision/Facial") directory.
 
 ##  Development Machine Setup
 You will need to setup your development machine so that we can convert the pretrained Facenet model to a graph that makes it compatible with the NCSDK. You will find [DevSetup.sh](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision/../Facial/DevSetup.sh "DevSetup.sh") which will install everything you need to download and convert the model. 
@@ -107,7 +107,7 @@ If you have problems running the above program and have errors try run the follo
 ```
 
 ##  Server Machine Setup
-Now you will need to setup your server machine. First you need to download the **tass.graph** file from your development machine and upload it to **Security/Server/Model** on your server machine. You will find [Setup.sh](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision/../Facial/Setup.sh "Setup.sh") which will install everything you need to run the server, there is some interaction required so make sure to watch the output. 
+Now you will need to setup your server machine. First you need to download the **tass.graph** file from your development machine and upload it to **Vision/Facial/Model** on your server machine. You will find [Setup.sh](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision/../Facial/Setup.sh "Setup.sh") which will install everything you need to run the server, there is some interaction required so make sure to watch the output. 
 
 Setup.sh is an executable shell script that will do the following:
 
