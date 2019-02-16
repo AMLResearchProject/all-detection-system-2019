@@ -159,7 +159,7 @@ To make sure that your server is responding correctly, you can use [Client.py](h
 
 You should see the following output: 
 
-![Server output](../Facial/Media/Images/Server.jpg) 
+![Server output](../Facial/Media/Images/Server.JPG) 
 
 Next open a new terminal, navigate to the Server directory on your server machine, and execute the following command:
  
@@ -168,7 +168,7 @@ Next open a new terminal, navigate to the Server directory on your server machin
 ```
 The output from my test dataset was as follows:
 
-![Client testing output](../Facial/Media/Images/Testing.jpg)
+![Client testing output](../Facial/Media/Images/Testing.JPG)
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
