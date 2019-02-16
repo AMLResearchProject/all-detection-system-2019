@@ -6,13 +6,13 @@ This project is made up of the above components which work together to provide a
 
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
-| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | In Progress | 
+| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | Development | 
 | [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Security") | Hosts a REST API with access to the AML/ALL NCS1 facial recognition security classifier using NCS/NCSDK & Siamese Neural Networks. | COMPLETE |
 | [Augmentation](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Augmentation "Data Augmentation") | Applies filters to the original dataset and increases the amount of training / test data. | COMPLETE |
 | [NCS1](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS1 Classifier") | Hosts a REST API with access to the AML/ALL NCS1 Classifier using NCS & NCSDK. | COMPLETE |   
-| [NCS2](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS2 Classifier") | Hosts a REST API with access to the AML/ALL NCS2 Classifier using NCS2 & OpenVino. | In Progress |
+| [NCS2](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS2 Classifier") | Hosts a REST API with access to the AML/ALL NCS2 Classifier using NCS2 & OpenVino. | Development |
 | [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | Hosts a REST API with access to the Natural Language Understanding Engine trained with basic knowledge of AML. | COMPLETE | 
-| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for speaking to the AML/ALL Naturall Language Understanding Engine. | In Progress |In Progress |
+| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for speaking to the AML/ALL Naturall Language Understanding Engine. | Development |
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
