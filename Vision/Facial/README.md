@@ -168,7 +168,7 @@ Next open a new terminal, navigate to the Server directory on your server machin
 ```
 The output from my test dataset was as follows:
 
-![Client testing output](../Facial/Media/Images/testing.jpg)
+![Client testing output](../Facial/Media/Images/Testing.jpg)
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.

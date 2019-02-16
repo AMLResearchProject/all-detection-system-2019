@@ -7,9 +7,8 @@
     "Cameras": [
         {
             "API": {
-                "IP": "192.168.1.26",
-                "Port": 2637,
-                "Access": ""
+                "IP": "Your IP",
+                "Port": 8080
             },
             "ID": 0,
             "Name": "",
