@@ -12,12 +12,14 @@ The Open Set Recognition Issue is a common, and unsolved issue with real world c
 
 One way to try and combat this issue is to have a 3rd class for "**unknown**" people. Previously I came across the Open Set Recognition Issue with my earlier version of **TASS** which was a **Tensorflow** model trained using Transfer Learning and Inception V3. The method of having a unknown class with random faces seemed to have no benefit with the Tensorflow version, but with a framework called **OpenFace** it was a good solution which worked well in small environments.
 
-For the Tensorflow Transfer Learning version we could Siamese Neural Networks as a second oppinion to help reduce the problem of the Open Set Recognition Issue, but for this tutorial we are not using Transfer Learning. 
+For the Tensorflow Transfer Learning version we could Siamese Neural Networks as a second opinion to help reduce the problem of the Open Set Recognition Issue, but for this tutorial we are not using Transfer Learning. 
 
 # Facial Recognition Server
 The primary vision system is the Facial Recognition Server. API endpoints provide access to a **Facenet** classifier and the dataset. Facenet uses **Siamese Neural Networks** trained with **Triplet Loss**, Siamese Networks and Triplet Loss are used in this project due to their ability to help overcome the **Open Set Recognition Issue** in **facial recogniton**. 
 
 The project runs on an **UP Squared** IoT development board and uses an **Intel® Movidius™ Neural Compute Stick** showing how computer vision can be run on gateway devices on **the edge** using smaller, lower spec IoT devices such as UP Squared or Raspberry Pi.
+
+Follow the [Facial Recognition Server README](https://github.com/AdamMiltonBarker/AML-Detection-System/tree/master/Vision/Facial "Facial Recognition Server README") to get started.
 
 ## Siamese Neural Networks
 ![Siamese Neural Networks](Facial/Media/Images/siamese-neural-networks.jpg) 
@@ -29,7 +31,7 @@ Given an unseen example and a known example / multiple known examples we can pas
 ## Triplet Loss
 Triplet Loss was used when training Facenet and reduces the difference between an anchor (an image) and a positive sample from the same class, and increases the difference between the ancher and a negative sample from an opposite class. Basically this means that 2 images with the same class (in this case, the same person) will have a smaller distance than two images from different classes (or 2 different people).
 
-# Intel® Movidius™ Neural Compute Stick
+## Intel® Movidius™ Neural Compute Stick
 ![Intel® Movidius™ Neural Compute Stick](Facial/Media/Images/Movidius.jpg) 
 The Intel® Movidius™ Neural Compute Stick is a piece of hardware, specifically a USB device, used for enhancing the inference process of computer vision models on low-powered/edge devices. The Intel® Movidius™ product is a USB appliance that can be plugged into devices such as Raspberry Pi and UP Squared, and basically takes the processing power off the device and onto the Intel Movidius brand chip, making the classification process a lot faster.
 
