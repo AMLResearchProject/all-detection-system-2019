@@ -57,6 +57,8 @@ Below you would replace __###.###.#.##__ with local IP address of your device.
   $ jupyter --ip ###.###.#.##
 ```
 
+Using the URL provided to you in the above step, you should be able to access a copy of this directory hosted on your own device. From here you can navigate the project files and source code, you need to navigate to the __AML-Detection-System/Augmentation/Augmentation.ipynb__ file on your own device which will take you to the second part of this tutorial. If you get stuck with anything in the above or following tutorial, please use the repository [issues](https://github.com/AMLResearchProject/AML-Detection-System/issues "issues") and fill out the request information.
+
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
 
