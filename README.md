@@ -1,14 +1,17 @@
-# AML (Acute Myeloid Leukemia) Detection System
-![Peter Moss AML (Acute Myeloid Leukemia) Detection System](Media/Images/Banner-Social.jpg)
-An open source Acute Myeloid Leukemia Detection System including data management, training and running facial and image classifiers on the edge with Intel technologies.
+# Acute Myeloid/Lymphoblastic (AML/ALL) Leukemia  Detection System
+![Peter Moss AML (Acute Myeloid Leukemia) Detection System](Media/Images/banner.png)
+The AML/ALL Detection System is an open source classifier including data management, training and running Convolutional Neural Networs on the edge with Intel technologies and a locally hosted PHP/MySQL webe/API server.|
+
+This project is made up of the above components which work together to provide a locally hosted management system that lets you upload and classifiy test data and see the results visually. Follow the completed tutorials above in the same order.  A full system setup requires [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server"), [Data Augmentation](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Augmentation "Data Augmentation") and [NCS1 Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS1 Classifier") tutorials to be completed. You will be able to find each of the components used below in our other project repositories which will allow you to run them as standalone devices, in the future this repository will be checked to ensure they can be run both independently as well as running as part of the GeniSys network.
 
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
-| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for managing and classifying data. Uses facial recognition for authentication. | In Progress |
-| [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | A REST API hosting an endpoint for Natural Language Understanding. Trained on knowledge of AML. | In Progress | 
-| [Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Classifier") | A REST API hosting an endpoint for classifying images using Convolutional Neural Networks. | In Progress |  
-| [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Security "Security") | A REST API hosting an endpoint for authentication using Siamese Neural Networks | Complete |  
-| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | In Progress |
+| [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | In Progress | 
+| [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Security") | Hosts a REST API with access to the AML/ALL NCS1 facial recognition security classifier using NCS/NCSDK & Siamese Neural Networks. | COMPLETE |
+| [*Data Augmentation](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Augmentation "Data Augmentation") | Applies filters to the original dataset and increases the amount of training / test data. | COMPLETE |
+| [**NCS1 Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS1 Classifier") | Hosts a REST API with access to the AML/ALL NCS1 Classifier using NCS & NCSDK. | COMPLETE |   
+| [NCS2 Classifier](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifier/ "NCS2 Classifier") | Hosts a REST API with access to the AML/ALL NCS1 Classifier using NCS2 & OpenVino. | In Progress | [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | A REST API hosting an endpoint for Natural Language Understanding. Trained on knowledge of AML. | COMPLETE | 
+| [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for speaking to the AML/ALL Naturall Language Understanding Engine. | In Progress |In Progress |
 
 # Contributing
 We welcome contributions of the project. Please read [CONTRIBUTING.md](https://github.com/AMLResearchProject/AML-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING.md") for details on our code of conduct, and the process for submitting pull requests.
