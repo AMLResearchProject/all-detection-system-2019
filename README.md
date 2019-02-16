@@ -7,12 +7,11 @@ This project is made up of the below components which work together to provide a
 | Project  | Description | Status |
 | ------------- | ------------- |  ------------- | 
 | [Server](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Server") | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Uses facial recognition for authentication. | Development | 
-| [Security](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Server "Security") | Hosts a REST API with access to the AML/ALL NCS1 facial recognition security classifier using NCS/NCSDK & Siamese Neural Networks. | COMPLETE |
 | [Augmentation](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Augmentation "Data Augmentation") | Applies filters to the original dataset and increases the amount of training / test data. | COMPLETE |
 | [NCS1](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifiers/Movidius/NCS/ "NCS1 Classifier") | Hosts a REST API with access to the AML/ALL NCS1 Classifier using NCS & NCSDK. | COMPLETE |   
 | [NCS2](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Classifiers/Movidius/NCS2/ "NCS2 Classifier") | Hosts a REST API with access to the AML/ALL NCS2 Classifier using NCS2 & OpenVino. | Development |
 | [Chatbot](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Chatbot "Chatbot") | Hosts a REST API with access to the Natural Language Understanding Engine trained with basic knowledge of AML. | COMPLETE |
-| [Vision](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision "Vision") | Hosts a REST API with access to the Siamese Neural Networks classifier. | Development | 
+| [Vision](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Vision "Vision") | Hosts a REST API with access to the Siamese Neural Networks classifier. | COMPLETE | 
 | [Android](https://github.com/AMLResearchProject/AML-Detection-System/tree/master/Android "Android") | An Android application for speaking to the AML/ALL Naturall Language Understanding Engine. | Development |
 
 # Contributing
