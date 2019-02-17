@@ -1,5 +1,5 @@
 # Acute Myeloid/Lymphoblastic Leukemia Movidius NCS Classifier
-![Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project](../Media/Images/banner.jpg) 
+![Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project](../../../Media/Images/banner.png) 
 
 The Peter Moss Acute Myeloid/Lymphoblastic Leukemia Classifier Movidius NCS Classifier is a Python Convolutional Neural Network coded in Python using Tensorflow, Inception V3 and Transfer Learning. The classifier is part of the [Peter Moss Acute Myeloid/Lymphoblastic (AML/ALL) Leukemia AI Research Project](https://www.facebook.com/AMLResearchProject/) computer vision R&D with the focus of detection/early detection of AML & ALL.
 
@@ -132,4 +132,4 @@ We use the [repo issues](https://github.com/AMLResearchProject/AML-Detection-Sys
 # Repository Manager
 Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
 
-[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)
+[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../../../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)
