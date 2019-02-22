@@ -74,7 +74,7 @@ Below you would replace __###.###.#.##__ with local IP address of your device.
 
 Using the URL provided to you in the above step, you should be able to access a copy of this directory hosted on your own device. From here you can navigate the project files and source code, you need to navigate to the __AML-ALL-Detection-System/Augmentation/Augmentation.ipynb__ file on your own device which will take you to the second part of this tutorial. If you get stuck with anything in the above or following tutorial, please use the repository [issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues "issues") and fill out the request information.
 
-# Run locally
+## Run locally
 If you would like to run the program locally you can navigate to the Augmentation directory and use the following command:
 
 ```
