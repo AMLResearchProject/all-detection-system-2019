@@ -1,0 +1,9 @@
+{
+  "Settings": {
+    "ImgDims": 299,
+    "TrainDir": "Model/Data/",
+    "AugDir": "Model/Augmented/",
+    "DataFile": "Model/Data/data.h5",
+    "LabelsFile": "Model/Data/labels.h5"
+  }
+}
