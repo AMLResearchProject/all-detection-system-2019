@@ -1,14 +1,18 @@
-# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project AML/ALL Detection System
+# Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
 
-## Acute Lymphoblastic Leukemia Tensorflow/TF Slim Inception V3 NCS1 Classifier
+## Acute Myeloid & Lymphoblastic Leukemia Detection System
 
-![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Detection System](../../../../../Media/Images/banner.png)
+![Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/repositories/banner.png)
 
-The Acute Lymphoblastic Leukemia Inception V3 NCS1 TF Slim Classifier is a CNN (Convolutional Neural Network) coded in Python using Tensorflow/TF Slim, Inception V3 and Transfer Learning. The classifier is part of the [Peter Moss Acute Myeloid/Lymphoblastic (AML/ALL) Leukemia AI Research Project](https://www.amlresearchproject.com) computer vision R&D with the focus of detection/early detection of AML & ALL.
+### Acute Lymphoblastic Leukemia TF Slim Inception V3 NCS1 Classifier
 
-This tutorial allows you to train a CNN locally on CPU/GPU or on Intel AI DevCloud. The classifier is trained on data provided in the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) that has been augmented to increase our data using the [AML/ALL Detection System Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1 "AML/ALL Detection System Data Augmentation program"). The Tensorflow model is trained and then converted to a format compatible with the Movidius NCS1 by freezing the Tensorflow model and then running it through the NCSDK compiler. In this project I use an an UP Squared and the NCS1 for inference, but you can use any device that is running Ubuntu 16.04 or 18.04.
+The Acute Lymphoblastic Leukemia Inception V3 NCS1 TF Slim Classifier is a CNN (Convolutional Neural Network) coded in Python using Tensorflow/TF Slim, Inception V3 and Transfer Learning. The classifier is part of the [Peter Moss Acute Myeloid & Lymphoblastic (AML & ALL) Leukemia AI Research Project](https://www.amlresearchproject.com) computer vision R&D with the focus of detection/early detection of AML & ALL.
+
+This tutorial allows you to train a CNN locally on CPU/GPU or on Intel AI DevCloud. The classifier is trained on data provided in the [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) that has been augmented to increase our data using the [AML & ALL Detection System Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1 "AML & ALL Detection System Data Augmentation program"). The Tensorflow model is trained and then converted to a format compatible with the Movidius NCS1 by freezing the Tensorflow model and then running it through the NCSDK compiler. In this project I use an an UP Squared and the NCS1 for inference, but you can use any device that is running Ubuntu 16.04 or 18.04.
 
 This classifier is an upgrade to the classifier previously built for the sister project, [Invasive Ductal Carcinoma Classifier](https://www.breastcancerai.com/).
+
+&nbsp;
 
 # Acute Myeloid Leukemia (AML)
 
@@ -22,6 +26,8 @@ The American Cancer Society's [estimates for leukemia in the United States for 2
 
 In comparison, according to the [American Cancer Society](https://www.cancer.org/cancer/acute-myeloid-leukemia/about/key-statistics.html "American Cancer Society") there are 180,000 women a year in the United States being diagnosed with Invasive Ductal Carcinoma (IDC), a type of breast cancer which forms in the breast duct and invades the areas surrounding it.
 
+&nbsp;
+
 # Acute Lymphoblastic Leukemia (ALL)
 
 Acute Lymphoblastic Leukemia is found in children and causes abnormally excessive amount of white blood cells known as lymphocytes. This form of Leukemia is also known as Acute Lymphocytic Leukemia. In this project we use data for ALL as we have yet to discover a good computer vision dataset for AML.
@@ -31,26 +37,34 @@ The American Cancer Society’s [estimates for acute lymphocytic leukemia (ALL) 
 - About 5,930 new cases of ALL (3,280 in males and 2,650 in females)
 - About 1,500 deaths from ALL (850 in males and 650 in females)
 
+&nbsp;
+
 # Acute Lymphoblastic Leukemia Image Database for Image Processing (ALL-IDB)
 
-![Acute Lymphoblastic Leukemia Image Database for Image Processing](Media/Images/slides.png)
-_Samples of augmented data generated using the Acute Lymphoblastic Leukemia Image Database for Image Processing dataset and the [AML/ALL Detection System Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1 "AML/ALL Detection System Data Augmentation program")._
+![Acute Lymphoblastic Leukemia Image Database for Image Processing](https://www.PeterMossAmlAllResearch.com/media/images/repositories/ALL_IDB1_Augmented_Slides.png)
+_Samples of augmented data generated using the Acute Lymphoblastic Leukemia Image Database for Image Processing dataset and the [AML & ALL Detection System Data Augmentation program](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1 "AML & ALL Detection System Data Augmentation program")._
 
 The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) dataset is used for this project. The dataset was created by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/). Big thanks to Fabio for his research and time put in to creating the dataset and documentation, it is one of his personal projects and without the dataset this project would not be possible.
 
+&nbsp;
+
 # Convolutional Neural Networks
 
-![Inception v3 architecture](Media/Images/CNN.jpg)
+![Inception v3 architecture](https://www.PeterMossAmlAllResearch.com/media/images/repositories/CNN.jpg)
 _Inception v3 architecture_ ([Source](https://github.com/tensorflow/models/tree/master/research/inception)).
 
 Convolutional neural networks are a type of deep learning neural network. These types of neural nets are widely used in computer vision and have pushed the capabilities of computer vision over the last few years, performing exceptionally better than older, more traditional neural networks; however, studies show that there are trade-offs related to training times and accuracy.
 
+&nbsp;
+
 # Transfer Learning
 
-![Inception v3 model diagram](Media/Images/Transfer-Learning.jpg)
+![Inception v3 model diagram](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Transfer-Learning.jpg)  
 _Inception V3 Transfer Learning_ ([Source](https://github.com/Hvass-Labs/TensorFlow-Tutorials)).
 
 Transfer learning allows you to retrain the final layer of an existing model, resulting in a significant decrease in not only training time, but also the size of the dataset required. One of the most famous models that can be used for transfer learning is the Inception V3 model. Inception V3 by Google is the 3rd version in a series of Deep Learning Convolutional Architectures. Inception V3 was trained using a dataset of 1,000 classes ([See the list of classes here](https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a "See the list of classes here")) from the original ImageNet dataset which was trained with over 1 million training images, the Tensorflow version has 1,001 classes which is due to an additional "background' class not used in the original ImageNet. Inception V3 was trained for the ImageNet Large Visual Recognition Challenge where it was a first runner up.
+
+&nbsp;
 
 # System Requirements
 
@@ -58,14 +72,18 @@ Transfer learning allows you to retrain the final layer of an existing model, re
 - [Tested with Python 3 and above](https://www.python.org/download/releases/3.0/ "Tested with Python 3 and above")
 - Requires PIP3
 
+&nbsp;
+
 # Hardware
 
-![UP Squared & Movidius NCS1](Media/Images/UP2.jpg)
+![UP Squared & Movidius NCS1](https://www.PeterMossAmlAllResearch.com/media/images/repositories/UP2.jpg)
 _UP Squared & Movidius NCS1._
 
 - Training device with NVIDIA GPU or [Intel® AI DevCloud](https://software.intel.com/en-us/ai/devcloud "Intel® AI DevCloud")
 - [UP2](https://up-shop.org/28-up-squared "UP2"), Raspberry Pi or other Linux device for testing
 - [Intel Movidius Neural Compute Stick 1](https://software.intel.com/en-us/neural-compute-stick "Intel Movidius Neural Compute Stick 1")
+
+&nbsp;
 
 # Software
 
@@ -75,9 +93,13 @@ _UP Squared & Movidius NCS1._
 
 Installed using Setup.sh, more information can be found later in the tutorial.
 
+&nbsp;
+
 # Gain Access To ALL-IDB
 
-You you need to be granted access to use the Acute Lymphoblastic Leukemia Image Database for Image Processing dataset. You can find the application form and information about getting access to the dataset on [this page](https://homes.di.unimi.it/scotti/all/#download) as well as information on how to contribute back to the project [here](https://homes.di.unimi.it/scotti/all/results.php). If you are not able to obtain a copy of the dataset please feel free to try this tutorial on your own dataset, we would be very happy to find additional AML/ALL datasets.
+You you need to be granted access to use the Acute Lymphoblastic Leukemia Image Database for Image Processing dataset. You can find the application form and information about getting access to the dataset on [this page](https://homes.di.unimi.it/scotti/all/#download) as well as information on how to contribute back to the project [here](https://homes.di.unimi.it/scotti/all/results.php). If you are not able to obtain a copy of the dataset please feel free to try this tutorial on your own dataset, we would be very happy to find additional AML & ALL datasets.
+
+&nbsp;
 
 # Data Augmentation
 
@@ -116,6 +138,8 @@ In my case the exact testing data that I extracted before creating the augmentat
 - Im0106_1.jpg
 
 It is important that your testing data is removed from your training data. The point is to ensure that when testing, you are using images that the network has never seen before.
+
+&nbsp;
 
 # Installation
 
@@ -157,7 +181,7 @@ To allow access to the ports use the following command for each of your ports:
 
 ## Clone the repository
 
-First of all you should clone the [AML/ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Detection-System/ "AML/ALL Detection System") repo to your device. To do this you can navigate to the location you want to download to on your device using terminal (cd Your/Download/Location), and then use the following commands:
+First of all you should clone the [AML & ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Detection-System/ "AML & ALL Detection System") repo to your device. To do this you can navigate to the location you want to download to on your device using terminal (cd Your/Download/Location), and then use the following commands:
 
 ```
   $ git clone https://github.com/AMLResearchProject/AML-ALL-Detection-System.git
@@ -178,13 +202,17 @@ If you have problems running the above program and have errors try run the follo
  $ sh setup.sh
 ```
 
+&nbsp;
+
 # Augment Your Data
 
 Once you have everything installed if you have not yet done so you need to follow the [Data Augmentation Jupyter Notebook](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1/Augmentation.ipynb "Data Augmentation Jupyter Notebook") or [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1/Manual.py "Data Augmentation Using Python") ([Tutorial](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/V1/ "Tutorial")) to generate a larger training and testing dataset.
 
 Once you have the augmented dataset you should have 1053 training images per class. You now need to move the augmented dataset to the [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Data directory](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Data/ "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Data directory") to your training device or AI DevCloud, and also move your testing data to the [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Test directory](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Test/ "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/Test directory") on your testing device.
 
-## Adjusting Your Configuration
+&nbsp;
+
+# Adjusting Your Configuration
 
 You can modify the configuration for your model using the configuration file in **Required/confs.json**. If you would like to try and replicate my results exactly, all you need to modify is the IP address that will be used by the API server.
 
@@ -239,6 +267,8 @@ You can modify the configuration for your model using the configuration file in 
 }
 ```
 
+&nbsp;
+
 # Training On CPU/NVIDIA GPU
 
 It is not recommended to train on CPU, although it should be possible it will take a long time and may max out resources. If you are training on your own device I would recommended that you use an NVIDIA GPU. You need to make sure you have Tensorflow/Tensprflow GPU 1.4.0 and related CUDA/CUDNN libraries installed before you can begin.
@@ -275,7 +305,7 @@ INFO:tensorflow:Restoring parameters from Model/_logs/model.ckpt-9343
 Exporting graph...
 INFO:tensorflow:Froze 378 variables.
 Converted 378 variables to const ops.
-2019-05-16 18:41:33,286 - Trainer - INFO - AML/ALL Detection System Movidius NCS1 Trainer ended in 5538.545530080795
+2019-05-16 18:41:33,286 - Trainer - INFO - AML & ALL Detection System Movidius NCS1 Trainer ended in 5538.545530080795
 ```
 
 You will see that our final training loss is **0.56189835** and our final training accuracy is **0.96698064** so there is still room for improvement. You will find out how to see more info about the training process in the **Tensorboard** section below.
@@ -302,6 +332,8 @@ INFO:tensorflow:Model evaluation has completed! Visit TensorBoard for more infor
 
 You will see that our final streaming accuracy is **0.9540** which is a little lower than the training accuracy shown above. We need to look more into what happened during training so we can see how to improve our model for version 2. To do this we can use Tensorboard, follow the instructions below.
 
+&nbsp;
+
 # Tensorboard
 
 Tensorboard is a graphical interface that can give you more detailed information and specfics about what went on during your training and validation. During the training and validation stages, logs were written to **AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/\_logs** & **AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model/\_logs_eval**. These logs can be used by Tensorboard to view more detailed information about your model. To run Tensorboard, navigate to the **AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/** directory and use the following commands, you will be given a URL in the output which will allow you to access Tensorboard on your local network.
@@ -322,27 +354,29 @@ Tensorboard is a graphical interface that can give you more detailed information
 
 There are two main graphs we are interested in, Training_Accuracy & Training_losses/Total_Loss.
 
-![Training_Accuracy](Media/Images/Training-Accuracy.png)
+![Training_Accuracy](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Training-Accuracy.png)
 _CPU/GPU Training Accuracy._
 
-![Training_losses/Total_Loss](Media/Images/Training-Loss.png)
+![Training_losses/Total_Loss](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Training-Loss.png)
 _CPU/GPU Training Loss._
 
 ## Tensorboard Validation Graphs
 
 There are two main graphs we are interested in, Valdation_Accuracy & Validation_losses/Total_Loss.
 
-![Validation_Accuracy](Media/Images/Validation-Accuracy.png)
+![Validation_Accuracy](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Validation-Accuracy.png)
 _CPU/GPU Validation Accuracy._
 
-![Training_losses/Total_Loss](Media/Images/Validation-Loss.png)
+![Training_losses/Total_Loss](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Validation-Loss.png)
 _CPU/GPU Validation Loss._
 
 Overall our model seems to be good, in V2 we will look at ways we can improve this model. You can now skip the **Training On AI DevCloud** section below and move on to the **Intel Movidius Neural Compute Stick 1** section.
 
+&nbsp;
+
 # Intel Movidius Neural Compute Stick 1
 
-![Intel® Movidius NCS1](Media/Images/Movidius-NCS1.jpg)
+![Intel® Movidius NCS1](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Movidius-NCS1.jpg)
 
 In this project we use NCS1 to run classifications in near real time. If your testing device is an IoT development device such as am UP Squared or Raspberry Pi it is recommended that you install the full NCSDK on your training device and the NCSDK API on your testing device. You can of course simply use your training device for both training and testing, in which case you only need to follow the guide for installing the full SDK.
 
@@ -386,9 +420,11 @@ Now we need to compile the frozen Tensorflow/TF Slim graph produced during train
 
 The above command will save ALL.graph to the **AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Model** directory.
 
+&nbsp;
+
 # Testing On Unseen Data
 
-Now we will use [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py") with your test data. This classifier passes your test data through the NCS1 and predicts if Acute Lymphoblastic Leukemia is found in the images. You will see the output in console and you can also locate all AML/ALL Detection System logs in the [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Logs](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Logs "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Logs") directory. To run the classifier, use the following command:
+Now we will use [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Classifier.py") with your test data. This classifier passes your test data through the NCS1 and predicts if Acute Lymphoblastic Leukemia is found in the images. You will see the output in console and you can also locate all AML & ALL Detection System logs in the [AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Logs](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Classifiers/Movidius/NCS/Tensorflow/V1/Logs "AML-ALL-Detection-System/Classifiers/Movidius/NCS/Tensorflow/V1/Logs") directory. To run the classifier, use the following command:
 
 ```
  $ python3 Classifier.py
@@ -407,93 +443,95 @@ This will run the classifier program using your test data. If you used the exact
 2019-05-16 18:54:22,596 - Movidius - INFO - Movidius graph allocated successfully.
 2019-05-16 18:54:22,597 - Movidius - INFO - Inception loaded successfully.
 2019-05-16 18:54:22,602 - Classifier - INFO - Classifier class initialization complete.
-2019-05-16 18:54:22,602 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 Classifier started.
+2019-05-16 18:54:22,602 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 Classifier started.
 2019-05-16 18:54:22,717 - Classifier - INFO - Loaded test image Model/Test/Im047_0.jpg
-2019-05-16 18:54:22,727 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:23,104 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3772411346435547
+2019-05-16 18:54:22,727 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:23,104 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3772411346435547
 2019-05-16 18:54:23,105 - Classifier - INFO - ALL correctly not detected with confidence of 0.996 in 0.3772411346435547
 2019-05-16 18:54:23,188 - Classifier - INFO - Loaded test image Model/Test/Im069_0.jpg
-2019-05-16 18:54:23,193 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:23,523 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.32992982864379883
+2019-05-16 18:54:23,193 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:23,523 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.32992982864379883
 2019-05-16 18:54:23,524 - Classifier - INFO - ALL correctly not detected with confidence of 0.998 in 0.32992982864379883
 2019-05-16 18:54:23,588 - Classifier - INFO - Loaded test image Model/Test/Im024_1.jpg
-2019-05-16 18:54:23,592 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:23,922 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.329970121383667
+2019-05-16 18:54:23,592 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:23,922 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.329970121383667
 2019-05-16 18:54:23,923 - Classifier - INFO - ALL correctly detected with confidence of 0.9717 in 0.329970121383667
 2019-05-16 18:54:24,028 - Classifier - INFO - Loaded test image Model/Test/Im063_1.jpg
-2019-05-16 18:54:24,033 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:24,364 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3305361270904541
+2019-05-16 18:54:24,033 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:24,364 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3305361270904541
 2019-05-16 18:54:24,364 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.3305361270904541
 2019-05-16 18:54:24,466 - Classifier - INFO - Loaded test image Model/Test/Im060_1.jpg
-2019-05-16 18:54:24,471 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:24,801 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3299868106842041
+2019-05-16 18:54:24,471 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:24,801 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3299868106842041
 2019-05-16 18:54:24,801 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.3299868106842041
 2019-05-16 18:54:24,836 - Classifier - INFO - Loaded test image Model/Test/Im028_1.jpg
-2019-05-16 18:54:24,839 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:25,169 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33057355880737305
+2019-05-16 18:54:24,839 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:25,169 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33057355880737305
 2019-05-16 18:54:25,170 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.535 in 0.33057355880737305
 2019-05-16 18:54:25,244 - Classifier - INFO - Loaded test image Model/Test/Im041_0.jpg
-2019-05-16 18:54:25,249 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:25,579 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.329897403717041
+2019-05-16 18:54:25,249 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:25,579 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.329897403717041
 2019-05-16 18:54:25,579 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.329897403717041
 2019-05-16 18:54:25,656 - Classifier - INFO - Loaded test image Model/Test/Im101_0.jpg
-2019-05-16 18:54:25,661 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:25,991 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33039259910583496
+2019-05-16 18:54:25,661 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:25,991 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33039259910583496
 2019-05-16 18:54:25,992 - Classifier - INFO - ALL correctly not detected with confidence of 0.999 in 0.33039259910583496
 2019-05-16 18:54:26,050 - Classifier - INFO - Loaded test image Model/Test/Im006_1.jpg
-2019-05-16 18:54:26,053 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:26,382 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3289906978607178
+2019-05-16 18:54:26,053 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:26,382 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3289906978607178
 2019-05-16 18:54:26,382 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.3289906978607178
 2019-05-16 18:54:26,456 - Classifier - INFO - Loaded test image Model/Test/Im106_0.jpg
-2019-05-16 18:54:26,461 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:26,792 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.330230712890625
+2019-05-16 18:54:26,461 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:26,792 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.330230712890625
 2019-05-16 18:54:26,792 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.330230712890625
 2019-05-16 18:54:26,849 - Classifier - INFO - Loaded test image Model/Test/Im031_1.jpg
-2019-05-16 18:54:26,851 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:27,181 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3298039436340332
+2019-05-16 18:54:26,851 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:27,181 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3298039436340332
 2019-05-16 18:54:27,181 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.627 in 0.3298039436340332
 2019-05-16 18:54:27,277 - Classifier - INFO - Loaded test image Model/Test/Im095_0.jpg
-2019-05-16 18:54:27,282 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:27,613 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33101320266723633
+2019-05-16 18:54:27,282 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:27,613 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33101320266723633
 2019-05-16 18:54:27,614 - Classifier - INFO - ALL correctly not detected with LOW confidence of 0.6353 in 0.33101320266723633
 2019-05-16 18:54:27,712 - Classifier - INFO - Loaded test image Model/Test/Im057_1.jpg
-2019-05-16 18:54:27,717 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:28,047 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33032727241516113
+2019-05-16 18:54:27,717 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:28,047 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33032727241516113
 2019-05-16 18:54:28,048 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.33032727241516113
 2019-05-16 18:54:28,122 - Classifier - INFO - Loaded test image Model/Test/Im053_1.jpg
-2019-05-16 18:54:28,128 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:28,460 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.3321037292480469
+2019-05-16 18:54:28,128 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:28,460 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.3321037292480469
 2019-05-16 18:54:28,461 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.3321037292480469
 2019-05-16 18:54:28,563 - Classifier - INFO - Loaded test image Model/Test/Im088_0.jpg
-2019-05-16 18:54:28,568 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:28,898 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33005690574645996
+2019-05-16 18:54:28,568 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:28,898 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33005690574645996
 2019-05-16 18:54:28,898 - Classifier - INFO - ALL correctly not detected with confidence of 0.9395 in 0.33005690574645996
 2019-05-16 18:54:28,931 - Classifier - INFO - Loaded test image Model/Test/Im020_1.jpg
-2019-05-16 18:54:28,933 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:29,263 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.329453706741333
+2019-05-16 18:54:28,933 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:29,263 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.329453706741333
 2019-05-16 18:54:29,263 - Classifier - WARNING - ALL incorrectly not detected with LOW confidence of 0.6143 in 0.329453706741333
 2019-05-16 18:54:29,294 - Classifier - INFO - Loaded test image Model/Test/Im026_1.jpg
-2019-05-16 18:54:29,297 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:29,627 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.32950830459594727
+2019-05-16 18:54:29,297 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:29,627 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.32950830459594727
 2019-05-16 18:54:29,627 - Classifier - INFO - ALL correctly detected with confidence of 0.993 in 0.32950830459594727
 2019-05-16 18:54:29,701 - Classifier - INFO - Loaded test image Model/Test/Im099_0.jpg
-2019-05-16 18:54:29,706 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:30,036 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.32971668243408203
+2019-05-16 18:54:29,706 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:30,036 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.32971668243408203
 2019-05-16 18:54:30,036 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.32971668243408203
 2019-05-16 18:54:30,111 - Classifier - INFO - Loaded test image Model/Test/Im074_0.jpg
-2019-05-16 18:54:30,116 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:30,447 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33063435554504395
+2019-05-16 18:54:30,116 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:30,447 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33063435554504395
 2019-05-16 18:54:30,447 - Classifier - INFO - ALL correctly not detected with confidence of 0.9863 in 0.33063435554504395
 2019-05-16 18:54:30,522 - Classifier - INFO - Loaded test image Model/Test/Im035_0.jpg
-2019-05-16 18:54:30,527 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection started.
-2019-05-16 18:54:30,857 - Classifier - INFO - AML/ALL Detection System Movidius NCS1 detection ended taking 0.33020448684692383
+2019-05-16 18:54:30,527 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection started.
+2019-05-16 18:54:30,857 - Classifier - INFO - AML & ALL Detection System Movidius NCS1 detection ended taking 0.33020448684692383
 2019-05-16 18:54:30,858 - Classifier - INFO - ALL correctly not detected with confidence of 0.999 in 0.33020448684692383
 2019-05-16 18:54:30,858 - Classifier - INFO - Testing ended. 19 correct, 1 incorrect, 4 low confidence: (3 correct, 1 incorrect)
 ```
 
 </details>
 
-## Serving Your ALL Model
+&nbsp;
+
+# Serving Your ALL Model
 
 Now that we are all trained and tested, it is time to set up the server that will serve an **API endpoint** that provides access to your trained model via HTTP requests. The GeniSysAI UI will use this API to interact with the AI for training / classifying etc.
 
@@ -574,17 +612,31 @@ This will send the test data to the model API and return the predictions. You sh
 2019-05-18 11:28:54,534 - ClassifierServerClient - INFO - Model/Test/Im035_0.jpg: ALL not detected with a confidence of 0.998 in 0.3307936191558838
 ```
 
+&nbsp;
+
 # Conclusion
 
 Based on training and validation statistics, it is clear that we can still improve our model. However on unseen data the classifier functions well with 19 correct classifications (3 with low confidence) and 1 incorrect classifications (1 with low confidence). In V2 we will enhance this model and aim to create a more reliable and accurate model. Feel free to play with different testing data and/or modify the configuration / code to see how you do.
 
+&nbsp;
+
+# About the author
+
+[Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") is a [Bigfinite](https://www.bigfinite.com "Bigfinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
+
+&nbsp;
+
 # Contributing
 
-The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
+The Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
-## Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project Team Contributors
+Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
 
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
+## Acute Myeloid & Lymphoblastic Leukemia Detection System Contributors
+
+- [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
+- [Dr Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Dr Amita Kapoor") - Associate Professor in the Department of Electronics, SRCASW, Delhi University, Delhi, India
+- [Taru Jane](https://www.petermossamlallresearch.com/team/salvatore-raieli/profile "Taru Jane") - Pre-final year undergraduate pursuing B.Tech in IT, Project Research Intern, Delhi, India
 
 &nbsp;
 
@@ -599,11 +651,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](https://g
 # Bugs/Issues
 
 We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues "repo issues") to track bugs and general requests related to using this project.
-
-&nbsp;
-
-# Repository Manager
-
-Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
-
-[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../../../../../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)

@@ -1,17 +1,23 @@
-# Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project
+# Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
 
-## AML/ALL Detection System
+## Acute Myeloid & Lymphoblastic Leukemia Detection System
+
+![Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/repositories/banner.png)
 
 ## Data Augmentation
 
-![Peter Moss Acute Myeloid/Lymphoblastic Leukemia Research Project](Media/Images/banner.png)
+![Peter Moss Acute Myeloid & Lymphoblastic Leukemia Research Project](https://www.PeterMossAmlAllResearch.com/media/images/repositories/ALL_IDB1_Augmentation_Banner-Lg.png)
 
-The AML/ALL Detection System Data Augmentation program applies augmentations/filters to datasets and increases the amount of training/test data available to use. The program is part of the computer vision research and development for the Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project. This page will provide general information, as well as a guide for installing and setting up the augmentation script.
+The AML & ALL Detection System Data Augmentation program applies augmentations/filters to datasets and increases the amount of training/test data available to use. The program is part of the computer vision research and development for the Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project. This page will provide general information, as well as a guide for installing and setting up the augmentation script.
 
-| Project                                                                                                                                                                                           | Description                                                                                                             | Author                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [Data Augmentation Using Jupyter Notebook](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/Augmentation.ipynb "Data Augmentation Using Jupyter Notebook") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
-| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/Manual.py "Data Augmentation Using Python")                              | A Python program for applying filters to datasets to increase the amount of training / test data.                       | [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") |
+&nbsp;
+
+| Project                                                                                                                                                                                           | Description                                                                                                             | Author                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| [Data Augmentation Using Jupyter Notebook](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/Augmentation.ipynb "Data Augmentation Using Jupyter Notebook") | A Python tutorial and Jupyter Notebook for applying filters to datasets to increase the amount of training / test data. | [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") |
+| [Data Augmentation Using Python](https://github.com/AMLResearchProject/AML-ALL-Detection-System/tree/master/Augmentation/Manual.py "Data Augmentation Using Python")                              | A Python program for applying filters to datasets to increase the amount of training / test data.                       | [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") |
+
+&nbsp;
 
 # Research papers followed
 
@@ -21,7 +27,9 @@ Research papers used in this part of the project were shared by project team mem
 | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | Leukemia Blood Cell Image Classification Using Convolutional Neural Network | T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon | [Paper](http://www.ijcte.org/vol10/1198-H0012.pdf "Paper") |
 
-# Datasets
+&nbsp;
+
+# Dataset
 
 The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://homes.di.unimi.it/scotti/all/) dataset is used for this project. The dataset was created by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/). Big thanks to Fabio for his research and time put in to creating the dataset and documentation, it is one of his personal projects. You will need to follow the steps outlined [here](https://homes.di.unimi.it/scotti/all/#download) to gain access to the dataset.
 
@@ -29,15 +37,19 @@ The [Acute Lymphoblastic Leukemia Image Database for Image Processing](https://h
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
 | Acute Lymphoblastic Leukemia Image Database for Image Processing | Created by [Fabio Scotti, Associate Professor Dipartimento di Informatica, Università degli Studi di Milano](https://homes.di.unimi.it/scotti/). | [Dataset](https://homes.di.unimi.it/scotti/all/#download "Dataset") |
 
+&nbsp;
+
 # Data augmentation
 
-![Acute Myeloid Leukemia Research Python Classifier](Media/Images/slides.png)
+![AML & ALL Data Augmentation](https://www.PeterMossAmlAllResearch.com/media/images/repositories/ALL_IDB1_Augmented_Slides.png)
 
 I decided to use some augmentation proposals outlined in Leukemia Blood Cell Image Classification Using Convolutional Neural Network by T. T. P. Thanh, Caleb Vununu, Sukhrob Atoev, Suk-Hwan Lee, and Ki-Ryong Kwon. The augmentations I chose were grayscaling, histogram equalization, horizontal and vertical reflection, rotation, translation and gaussian blur.
 
 In this dataset there were 49 negative and 59 positive. To make this even I removed 10 images from the positive dataset. From here I removed a further 10 images per class for testing further on in the tutorial and for the purpose of demos etc. In my case I ended up with 20 test images (10 pos/10 neg) and 39 images per class ready for augmentation. Place the original images that you wish to augment into the **Model/Data/0** & **Model/Data/1**. Using this program I was able to create a dataset of **1053** positive and **1053** negative augmented images.
 
 The full Python class that holds the functions mentioned below can be found in [Classes/Data.py](Classes/Data.py), The Data class is a wrapper class around releated functions provided in popular computer vision libraries including as OpenCV and Scipy.
+
+&nbsp;
 
 ## Resizing
 
@@ -231,13 +243,17 @@ def rotation(self, path, filePath, filename, show = False):
 - Requires PIP3
 - Jupyter Notebook (Optional)
 
-# Installation
+&nbsp;
 
-Below is a guide on how to install the augmentation program on your device, as mentioned above the program has been tested with Ubuntu 18.04 & 16.04, but may work on other versions of Linux and possibly Windows.
+# Setup
+
+Below is a guide on how to setup the augmentation program on your device, as mentioned above the program has been tested with Ubuntu 18.04 & 16.04, but may work on other versions of Linux and possibly Windows.
+
+&nbsp;
 
 ## Clone the repository
 
-First of all you should clone the [AML/ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Detection-System/ "AML/ALL Detection System") repo to your device. To do this can you navigate to the location you want to download to on your device using terminal (cd Your/Download/Location), and then use the following command:
+First of all you should clone the [AML & ALL Detection System](https://github.com/AMLResearchProject/AML-ALL-Detection-System/ "AML & ALL Detection System") repo to your device. To do this can you navigate to the location you want to download to on your device using terminal (cd Your/Download/Location), and then use the following command:
 
 ```
   $ git clone https://github.com/AMLResearchProject/AML-ALL-Detection-System.git
@@ -255,6 +271,8 @@ If you have problems running the above program and have errors try run the follo
  $ sed -i 's/\r//' setup.sh
  $ sh setup.sh
 ```
+
+&nbsp;
 
 ## Sort your dataset
 
@@ -289,19 +307,31 @@ If you would like to run the program locally you can navigate to the Augmentatio
   $ python3.5 Manual.py
 ```
 
-# Your augmented dataset
+## Your augmented dataset
 
-If you head to your **Model/Data/** directory you will notice the augmented directory. Inside the augmented directory you will find 0 (negative) and 1 (postive) directories including resized copies of the original along with Grayscaled, Histogram Equalized, Reflected, Gaussian Blurred and rotated copies.
+If you head to your **Model/Data/** directory you will notice the augmented directory. Inside the augmented directory you will find 0 (negative) and 1 (postive) directories including resized copies of the original along with augmented copies.
 
 Using data augmentation I was able to increase the dataset from 39 images per class to 1053 per class.
 
+&nbsp;
+
+# About the author
+
+[Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") is a [Bigfinite](https://www.bigfinite.com "Bigfinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
+
+&nbsp;
+
 # Contributing
 
-The Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the community to the Github repositories. Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull request. You will also find information about our code of conduct on this page.
+The Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research project encourages and welcomes code contributions, bug fixes and enhancements from the Github.
 
-## Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project Team Contributors
+Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Detection-System/blob/master/CONTRIBUTING.md "CONTRIBUTING") document for a full guide to forking our repositories and submitting your pull requests. You will also find information about our code of conduct on this page.
 
-- [Adam Milton-Barker](https://github.com/AdamMiltonBarker "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
+## Acute Myeloid & Lymphoblastic Leukemia Detection System Contributors
+
+- [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
+- [Dr Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Dr Amita Kapoor") - Associate Professor in the Department of Electronics, SRCASW, Delhi University, Delhi, India
+- [Taru Jane](https://www.petermossamlallresearch.com/team/salvatore-raieli/profile "Taru Jane") - Pre-final year undergraduate pursuing B.Tech in IT, Project Research Intern, Delhi, India
 
 &nbsp;
 
@@ -316,11 +346,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](https://g
 # Bugs/Issues
 
 We use the [repo issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues "repo issues") to track bugs and general requests related to using this project.
-
-&nbsp;
-
-# Repository Manager
-
-Adam is a [BigFinite](https://www.bigfinite.com "BigFinite") IoT Network Engineer, part of the team that works on the core IoT software. In his spare time he is an [Intel Software Innovator](https://software.intel.com/en-us/intel-software-innovators/overview "Intel Software Innovator") in the fields of Internet of Things, Artificial Intelligence and Virtual Reality.
-
-[![Adam Milton-Barker: BigFinte IoT Network Engineer & Intel® Software Innovator](../Media/Images/Adam-Milton-Barker.jpg)](https://github.com/AdamMiltonBarker)

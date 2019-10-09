@@ -1,41 +1,44 @@
-# Contributing
+# Peter Moss Acute Myeloid / Lymphoblastic Leukemia AI Research Project
 
-![Contributing to the Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project AML/ALL Detection System repository](Media/Images/banner.png)
-We encourage bug fixes and enhancements submitted by the community and there are a number of ways you can contribute towards the Peter Moss Acute Myeloid/Lymphoblastic Leukemia AI Research Project AML/ALL Detection System repository. Images in this document show the Classifiers repository, but the process is the same for any repository.
+## Contributing to the AML & ALL Detection System Repository
 
-![Feature Proposal](Media/Images/Contributing-Feature-Proposal.jpg)
+![Peter Moss Acute Myeloid / Lymphoblastic Leukemia AI Research Project](https://www.PeterMossAmlAllResearch.com/media/images/banner.png)
+
+We encourage bug fixes and enhancements submitted by the community and there are a number of ways you can contribute towards the Peter Moss Acute Myeloid & Lymphoblastic Leukemia Detection System repository.
+
+![Feature Proposal](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Contributing-Feature-Proposal.jpg)
 
 ## Bug reports
 
-If you would like to contribute bug fixes or make the team aware of bugs you have identified in the project, please raise a **Bug report** issue in the [Acute Myeloid/Lymphoblastic Leukemia Classifiers repository issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your bug report / bug fix(es) which will be reviewed by the team who will communicate through your issue.
+If you would like to contribute bug fixes or make the team aware of bugs you have identified in the project, please raise a **Bug report** issue in the [Acute Myeloid & Lymphoblastic Leukemia Detection System repository issues](https://github.com/AMLResearchProject/AML-ALL-Research-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your bug report / bug fix(es) which will be reviewed by the team who will communicate through your issue.
 
 ## Feature requests
 
-If you would like to contribute by suggesting features for the project, please raise a **Feature request** issue in the [Acute Myeloid/Lymphoblastic Leukemia Classifiers repository issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your feature request which will be reviewed by the team who will communicate through your issue.
+If you would like to contribute by suggesting features for the project, please raise a **Feature request** issue in the [Acute Myeloid & Lymphoblastic Leukemia Detection System repository issues](https://github.com/AMLResearchProject/AML-ALL-Research-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your feature request which will be reviewed by the team who will communicate through your issue.
 
 ## Feature proposals
 
-If you would like to contribute new features to the project, please raise a **Feature proposal** issue in the [Acute Myeloid/Lymphoblastic Leukemia Classifiers repository issues](https://github.com/AMLResearchProject/AML-ALL-Detection-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your feature proposal which will be reviewed by the team who will communicate through your issue.
+If you would like to contribute new features to the project, please raise a **Feature proposal** issue in the [Acute Myeloid & Lymphoblastic Leukemia Detection System repository issues](https://github.com/AMLResearchProject/AML-ALL-Research-System/issues/new/choose) section. A template is provided that will allow you to provide your suggestions for your feature proposal which will be reviewed by the team who will communicate through your issue.
 
 &nbsp;
 
 # Creating a fork of the repository
 
-![Creating a fork of the repository](Media/Images/Contributing-Fork.jpg)
+![Creating a fork of the repository](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Contributing-Fork.jpg)
 If you are going to be contributing code or documentation to the repository you will need to make a fork of the current development branch. The current development branch will always be the highest branch or master. Once you have created a fork of the repository, you will be able to clone the repository to a location on your development machine using terminal and Git or Github Desktop if using Windows.
 
 &nbsp;
 
 # Push changes to forked repository
 
-![Push changes to forked repository](Media/Images/Contributing-Commit-Push.jpg)
+![Push changes to forked repository](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Contributing-Commit-Push.jpg)
 When you have made your changes, you need to push them to your forked repository. This process requires a commit with a message about what your commit is, and then finally a push to the repository which will place your changes or created files to your forked repository.
 
 &nbsp;
 
 # Pull requests
 
-![Pull requests](Media/Images/Contributing-Pull-Requests.jpg)
+![Pull requests](https://www.PeterMossAmlAllResearch.com/media/images/repositories/Contributing-Pull-Requests.jpg)
 When you are satisfied with your changes you can submit a pull request that will request that your changes be pulled into the latest development branch.
 
 ## Pull Request Process
@@ -100,7 +103,7 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at info@amlresearchproject.com. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at github@tassai.tech. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
 
 &nbsp;
 
@@ -110,4 +113,4 @@ Project maintainers who do not follow or enforce the Code of Conduct in good fai
 
 # Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version]
+This Code of Conduct is adapted from the [Contributor Covenant](http://contributor-covenant.org/version/1/4), version 1.4.
