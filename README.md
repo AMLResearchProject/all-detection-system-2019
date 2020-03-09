@@ -35,7 +35,7 @@ Please read the [CONTRIBUTING](https://github.com/AMLResearchProject/AML-ALL-Det
 
 - [Adam Milton-Barker](https://www.petermossamlallresearch.com/team/adam-milton-barker/profile "Adam Milton-Barker") - Bigfinite IoT Network Engineer & Intel Software Innovator, Barcelona, Spain
 - [Dr Amita Kapoor](https://www.petermossamlallresearch.com/team/amita-kapoor/profile "Dr Amita Kapoor") - Associate Professor in the Department of Electronics, SRCASW, Delhi University, Delhi, India
-- [Taru Jane](https://www.petermossamlallresearch.com/team/salvatore-raieli/profile "Taru Jane") - Pre-final year undergraduate pursuing B.Tech in IT, Project Research Intern, Delhi, India
+- [Taru Jain](https://www.petermossamlallresearch.com/students/student/taru-jain/profile "Taru Jain") - Pre-final year undergraduate pursuing B.Tech in IT, Project Research Intern, Delhi, India
 
 &nbsp;
 
