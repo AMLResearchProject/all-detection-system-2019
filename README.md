@@ -12,10 +12,10 @@
 
 - [Introduction](#introduction)
 - [Intel® DevMesh AI Spotlight Award](#intel-devmesh-ai-spotlight-award)
+- [Projects](#projects)
 - [Intel® Technologies](#Intel®-technologies)
 - [Related Events](#related-events)
 - [Related Team Publications](#related-team-publications)
-- [Projects](#projects)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -35,6 +35,18 @@ This project is made up of a number of components which work together to provide
 ![Intel® DevMesh AI Spotlight Award](Media/Images/award.jpg)
 
 In 2019 the Acute Lymphoblastic Leukemia Detection System 2019 was awarded the Intel® Devmesh AI Spotlight Award. Our project was one of 4 projects, and 1st from Europe, awarded the then new designation granted by Intel recognizing inspiring and breakthrough Artificial Intelligence projects in development from the Intel software community.
+
+&nbsp;
+
+# Projects
+
+| Project                                                                                                                                                                                                                                                                                                                                                                      | Description                                                                                                                         | Status      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [Server](Server "Server")                                                                                                                                                                                                                                                                   | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Based on the [GeniSysAI Server](https://github.com/GeniSysAI/Server "GeniSysAI Server").                                             | Complete |
+| [Facial-Auth](Facial-Auth "Facial-Auth")                                                                                                                                                                                                                                                    | Siamese Neural Networks used for facial authentication. Hosts a REST API endpoint that exposes the model for remote classification.          | Complete    |
+| [Augmentation](Augmentation "Data Augmentation")                                                                                                                                                                                                                                         | Applies filters to the original dataset and increases the amount of training data used for the [NCS1 Tensorflow Classifier](NCS1 "NCS1 Tensorflow Classifier").                                           | Complete    |
+| [NCS1 Tensorflow Classifier](NCS1 "NCS1 Tensorflow Classifier") | The Acute Lyphoblastic Leukemia Detection System 2019 Tensorflow NCS1 Classifier, using NCS & NCSDK. Hosts a REST API endpoint that exposes the model for remote classification. | Complete    |
+| [Chatbot](Chatbot "Chatbot")                                                                                                                                                                                                                                                             | A Tensorflow Natural Language Understanding Engine trained with basic knowledge of AML. Hosts a REST API endpoint that exposes the model for remote classification                     | Complete    |
 
 &nbsp;
 
@@ -66,18 +78,6 @@ A number of our team members are [Intel® Software Innovators](https://software.
 - [Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)](https://software.intel.com/en-us/articles/acute-myeloidlymphoblastic-leukemia-data-augmentation "Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
 
 - [Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)](https://software.intel.com/en-us/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic "Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
-
-&nbsp;
-
-# Projects
-
-| Project                                                                                                                                                                                                                                                                                                                                                                      | Description                                                                                                                         | Status      |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [Server](Server "Server")                                                                                                                                                                                                                                                                   | A local PHP/MySQL server hosting a web based UI for managing and classifying data. Based on the [GeniSysAI Server](https://github.com/GeniSysAI/Server "GeniSysAI Server").                                             | Complete |
-| [Facial-Auth](Facial-Auth "Facial-Auth")                                                                                                                                                                                                                                                    | Siamese Neural Networks used for facial authentication. Hosts a REST API endpoint that exposes the model for remote classification.          | Complete    |
-| [Augmentation](Augmentation "Data Augmentation")                                                                                                                                                                                                                                         | Applies filters to the original dataset and increases the amount of training data used for the [NCS1 Tensorflow Classifier](NCS1 "NCS1 Tensorflow Classifier").                                           | Complete    |
-| [NCS1 Tensorflow Classifier](NCS1 "NCS1 Tensorflow Classifier") | The Acute Lyphoblastic Leukemia Detection System 2019 Tensorflow NCS1 Classifier, using NCS & NCSDK. Hosts a REST API endpoint that exposes the model for remote classification. | Complete    |
-| [Chatbot](Chatbot "Chatbot")                                                                                                                                                                                                                                                             | A Tensorflow Natural Language Understanding Engine trained with basic knowledge of AML. Hosts a REST API endpoint that exposes the model for remote classification                     | Complete    |
 
 &nbsp;
 
