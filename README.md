@@ -42,9 +42,9 @@ In 2019 the Acute Lymphoblastic Leukemia Detection System 2019 was awarded the I
 ![UP Squared & Movidius NCS1](Media/Images/Hardware.jpg)
 _UP Squared & Movidius NCS1._
 
-This project uses various Intel® technologies such as [UP2](https://up-shop.org/up-squared-series.html "UP2"), [Intel® Movidius Neural Compute Stick 1](https://software.Intel®.com/en-us/neural-compute-stick "Intel® Movidius Neural Compute Stick 1") and [Intel® AI DevCloud](https://software.Intel®.com/en-us/ai/devcloud "Intel® AI DevCloud") to enhance the training process and combine powerful CNNs with edge technologies for Internet of Things networks.
+This project uses various Intel® technologies such as [UP2](https://up-shop.org/up-squared-series.html "UP2"), [Intel® Movidius Neural Compute Stick 1](https://software.intel.com/en-us/neural-compute-stick "Intel® Movidius Neural Compute Stick 1") and [Intel® AI DevCloud](https://software.intel.com/en-us/ai/devcloud "Intel® AI DevCloud") to enhance the training process and combine powerful CNNs with edge technologies for Internet of Things networks.
 
-A number of our team members are [Intel® Software Innovators](https://software.Intel®.com/en-us/Intel®-software-innovators/overview "Intel® Software Innovators"), part of an Intel® program that supports independent developers with the latest Intel® hardware/software, speakerships & event opportunities, as well as technical advice and support through the various on and offline communities.
+A number of our team members are [Intel® Software Innovators](https://software.intel.com/en-us/intel-software-innovators/overview "Intel® Software Innovators"), part of an Intel® program that supports independent developers with the latest Intel® hardware/software, speakerships & event opportunities, as well as technical advice and support through the various on and offline communities.
 
 &nbsp;
 
@@ -63,9 +63,9 @@ A number of our team members are [Intel® Software Innovators](https://software.
 
 - [Applied Analytics for clinical decision support (Bachelor Thesis)](https://www.leukemiaresearchassociation.ai/research-projects/media/pdfs/estela-cabezas-bachelor-thesis.pdf "Applied Analytics for clinical decision support (Bachelor Thesis)") - [Estela Cabezas](https://www.leukemiaresearchassociation.ai/team/estela-cabezas "Estela Cabezas")
 
-- [Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)](https://software.Intel®.com/en-us/articles/acute-myeloidlymphoblastic-leukemia-data-augmentation "Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
+- [Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)](https://software.intel.com/en-us/articles/acute-myeloidlymphoblastic-leukemia-data-augmentation "Acute Myeloid/Lymphoblastic Leukemia Data Augmentation (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
 
-- [Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)](https://software.Intel®.com/en-us/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic "Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
+- [Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)](https://software.intel.com/en-us/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic "Inception V3 Deep Convolutional Architecture For Classifying Acute Myeloid/Lymphoblastic Leukemia (Intel® AI Developer Program)") - [Adam Milton-Barker](https://www.leukemiaresearchassociation.ai/team/adam-milton-barker "Adam Milton-Barker")
 
 &nbsp;
 
