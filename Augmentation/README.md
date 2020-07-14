@@ -236,31 +236,33 @@ Translation is a type of Affine Transformation and basically repositions the ima
 Gaussian Blur is a popular technique used on images and is especially popular in the computer vision world. The function below uses the ndimage.gaussian_filter function. The created images will be saved to the relevant directories in the default configuration.
 
 ```
-def rotation(self, path, filePath, filename, show = False):
+    def rotation(self, path, filePath, filename, show=False):
+            """
+            Writes rotated copies of the image to the filepath provided. 
+            """
 
-        """
-        Writes rotated copies of the image to the filepath provided.
-        """
+            img = Image.open(filePath)
 
-        img = Image.open(filePath)
+            image = cv2.imread(filePath)
+            cols, rows, chs = image.shape
 
-        image = cv2.imread(filePath)
-        cols, rows, chs = image.shape
+            for i in range(0, 20):
+                # Seed needs to be set each time randint is called
+                random.seed(self.seed)
+                randDeg = random.randint(-180, 180)
+                matrix = cv2.getRotationMatrix2D((cols/2, rows/2), randDeg, 0.70)
+                rotated = cv2.warpAffine(image, matrix, (rows, cols), borderMode=cv2.BORDER_CONSTANT,
+                                        borderValue=(144, 159, 162))
+                fullPath = os.path.join(
+                    path, str(randDeg) + '-' + str(i) + '-' + filename)
 
-        for i in range(0, 20):
-            randDeg = random.randint(-180, 180)
-            matrix = cv2.getRotationMatrix2D((cols/2, rows/2), randDeg, 0.70)
-            rotated = cv2.warpAffine(image, matrix, (rows, cols), borderMode=cv2.BORDER_CONSTANT,
-                                         borderValue=(144, 159, 162))
-            fullPath = os.path.join(path, str(randDeg) + '-' + str(i) + '-' + filename)
+                self.writeImage(fullPath, rotated)
+                self.filesMade += 1
+                print("Rotated image written to: " + fullPath)
 
-            self.writeImage(fullPath, rotated)
-            self.filesMade += 1
-            print("Rotated image written to: " + fullPath)
-
-            if show is True:
-                plt.imshow(rotated)
-                plt.show()
+                if show is True:
+                    plt.imshow(rotated)
+                    plt.show()
 ```
 
 &nbsp;
@@ -342,15 +344,16 @@ If you would like to run the program locally you can navigate to the Augmentatio
 You need to make sure you have Jupyter Notebook installed, you can use the following commands to install Jupyter, if you are unsure if you have it installed you can run the commands and it will tell you if you already have it installed and exit the download.
 
 ```
-  pip3 install --user jupyter
+pip3 install --upgrade --force-reinstall --no-cache-dir jupyter
+sudo apt install jupyter-notebook
 ```
 
 Once you have completed the above, make sure you are in the **ALL-Detection-System-2019/Augmentation** directory and use the following commands to start your server, a URL will be shown in your terminal which will point to your Juupyter Notebook server with the required authentication details in the URL paramaters.
 
-Below you would replace **###.###.#.##** with local IP address of your device.
+Below you would replace **###.###.#.##** with local IP address of the device you are going to be running the augmentation on.
 
 ```
-  jupyter notebook --ip ###.###.#.##
+  sudo jupyter notebook --ip ###.###.#.##
 ```
 
 Using the URL provided to you in the above step, you should be able to access a copy of this directory hosted on your own device. From here you can navigate the project files and source code, you need to navigate to the **ALL-Detection-System-2019/Augmentation/Augmentation.ipynb** file on your own device which will take you to the second part of this tutorial. If you get stuck with anything in the above or following tutorial, please use the repository [issues](../issues "issues") and fill out the request information.
