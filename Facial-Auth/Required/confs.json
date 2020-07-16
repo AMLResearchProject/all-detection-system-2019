@@ -1,0 +1,25 @@
+{
+    "Server": {
+        "Logs": "Logs/",
+        "IP": "",
+        "Port": 8080
+    },
+    "Classifier": {
+        "Graph": "Model/tass.graph",
+        "Dlib": "Model/dlib/shape_predictor_68_face_landmarks.dat",
+        "DatasetPath": "Model/Train/",
+        "TestingPath": "Model/Data/Test/",
+        "ValidPath": "Model/Data/Known/",
+        "Threshold": 1.20,
+        "ValidIType": [
+            ".JPG",
+            ".JPEG",
+            ".PNG",
+            ".GIF",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".gif"
+        ]
+    }
+}
