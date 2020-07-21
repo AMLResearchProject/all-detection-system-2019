@@ -38,6 +38,7 @@
   - [Converting Your Graph](#converting-your-graph)
 - [Testing On Unseen Data](#testing-on-unseen-data)
 - [Serving Your ALL Model](#serving-your-all-model)
+- [Using the ALL Detection System 2019 UI](#using-the-all-detection-system-2019-ui)
 - [Conclusion](#conclusion)
 - [Contributing](#contributing)
     - [Contributors](#contributors)
@@ -339,7 +340,7 @@ It is not recommended to train on CPU, although it should be possible it will ta
 
 ## Prepare Your Data For Training
 
-The first thing you need to do is prepare your data ready to be used for training. Ensure you have moved your augmented data to the correct location and then use the following command:
+The first thing you need to do is prepare your data ready to be used for training. Ensure you have moved your augmented data and testing data to the correct locations and then use the following command:
 
 ```
   python3 Data.py
@@ -632,6 +633,99 @@ This will send the test data to the model API and return the predictions. You sh
 2020-07-21 20:11:11,023 - Client - INFO - Model/Test/Im026_1.jpg: ALL detected with a confidence of 0.994 in 0.33417510986328125
 2020-07-21 20:11:18,733 - Client - INFO - Model/Test/Im028_1.jpg: ALL not detected with a LOW confidence of 0.7217 in 0.3328828811645508
 2020-07-21 20:11:26,440 - Client - INFO - Model/Test/Im020_1.jpg: ALL not detected with a confidence of 0.957 in 0.3333897590637207
+```
+
+&nbsp;
+
+# Using the ALL Detection System 2019 UI
+
+The ALL Detection System 2019 UI is an extension for the [GeniSysAI Server](https://github.com/GeniSysAI/Server "GeniSysAI Server"). You can find the full code for this UI in the [Server](../Server "Server") directory.
+
+Once you have set up the server, you can use the UI to classify your test data. The system allows you to upload your test data and then send it to the server for classification, providing a visual classification tool. 
+
+During testing I found that using the uploaded test data resulted in better classification resultsm whether using the UI or using the uploaded test data locally with the classifier. 
+
+Using the untouched test data, the results were as follows: 
+
+```
+17 correct, 3 incorrect, 1 low confidence: (0 correct, 1 incorrect)
+```
+When uploading this test data to the classifier and testing using the local classifier or the http classifier, the results were as follows:
+
+```
+19 correct, 1 incorrect, 7 low confidence: (6 correct, 1 incorrect)
+```
+
+The upload script on the server uses PHP's **imagecreatefromjpeg**, **imagecrop** and **imagejpeg**, cropping the images to 600px x 600px. I attempted to replicate the PHP upload code in Python with both OpenCV and Pillow, but was not able to replicate the improvement in results. When I have some more time I will look into replicating the exact resize process in Python to see if we can improve the local results. 
+
+The full results using the dataset cropped using PHP are as follows:
+
+**Local Classifier**
+```
+2020-07-22 00:21:39,144 - Classifier - INFO - Loaded test image Model/Test/Im063_1.jpg
+2020-07-22 00:21:39,531 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.605 in 0.3793625831604004 seconds.
+2020-07-22 00:21:39,552 - Classifier - INFO - Loaded test image Model/Test/Im053_1.jpg
+2020-07-22 00:21:39,890 - Classifier - INFO - ALL correctly detected with confidence of 0.9893 in 0.3322145938873291 seconds.
+2020-07-22 00:21:39,910 - Classifier - INFO - Loaded test image Model/Test/Im074_0.jpg
+2020-07-22 00:21:40,247 - Classifier - INFO - ALL correctly not detected with confidence of 0.9507 in 0.3323228359222412 seconds.
+2020-07-22 00:21:40,262 - Classifier - INFO - Loaded test image Model/Test/Im088_0.jpg
+2020-07-22 00:21:40,600 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.3331441879272461 seconds.
+2020-07-22 00:21:40,619 - Classifier - INFO - Loaded test image Model/Test/Im069_0.jpg
+2020-07-22 00:21:40,957 - Classifier - INFO - ALL correctly not detected with confidence of 0.997 in 0.33281946182250977 seconds.
+2020-07-22 00:21:40,977 - Classifier - INFO - Loaded test image Model/Test/Im106_0.jpg
+2020-07-22 00:21:41,314 - Classifier - INFO - ALL correctly not detected with confidence of 0.995 in 0.331695556640625 seconds.
+2020-07-22 00:21:41,329 - Classifier - INFO - Loaded test image Model/Test/Im031_1.jpg
+2020-07-22 00:21:41,667 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.596 in 0.33196401596069336 seconds.
+2020-07-22 00:21:41,678 - Classifier - INFO - Loaded test image Model/Test/Im101_0.jpg
+2020-07-22 00:21:42,016 - Classifier - INFO - ALL correctly not detected with confidence of 0.995 in 0.3321669101715088 seconds.
+2020-07-22 00:21:42,035 - Classifier - INFO - Loaded test image Model/Test/Im041_0.jpg
+2020-07-22 00:21:42,373 - Classifier - INFO - ALL correctly not detected with confidence of 0.998 in 0.3324606418609619 seconds.
+2020-07-22 00:21:42,393 - Classifier - INFO - Loaded test image Model/Test/Im024_1.jpg
+2020-07-22 00:21:42,730 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.51 in 0.3314645290374756 seconds.
+2020-07-22 00:21:42,745 - Classifier - INFO - Loaded test image Model/Test/Im057_1.jpg
+2020-07-22 00:21:43,083 - Classifier - INFO - ALL correctly detected with confidence of 0.935 in 0.3325080871582031 seconds.
+2020-07-22 00:21:43,228 - Classifier - INFO - Loaded test image Model/Test/Im047_0.jpg
+2020-07-22 00:21:43,565 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.33155250549316406 seconds.
+2020-07-22 00:21:43,582 - Classifier - INFO - Loaded test image Model/Test/Im060_1.jpg
+2020-07-22 00:21:43,920 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.5815 in 0.33184123039245605 seconds.
+2020-07-22 00:21:43,933 - Classifier - INFO - Loaded test image Model/Test/Im095_0.jpg
+2020-07-22 00:21:44,270 - Classifier - INFO - ALL correctly not detected with LOW confidence of 0.733 in 0.331646203994751 seconds.
+2020-07-22 00:21:44,283 - Classifier - INFO - Loaded test image Model/Test/Im035_0.jpg
+2020-07-22 00:21:44,621 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.33235692977905273 seconds.
+2020-07-22 00:21:44,638 - Classifier - INFO - Loaded test image Model/Test/Im006_1.jpg
+2020-07-22 00:21:44,975 - Classifier - INFO - ALL correctly detected with confidence of 1.0 in 0.3319277763366699 seconds.
+2020-07-22 00:21:44,989 - Classifier - INFO - Loaded test image Model/Test/Im099_0.jpg
+2020-07-22 00:21:45,328 - Classifier - INFO - ALL correctly not detected with confidence of 1.0 in 0.33290529251098633 seconds.
+2020-07-22 00:21:45,347 - Classifier - INFO - Loaded test image Model/Test/Im026_1.jpg
+2020-07-22 00:21:45,684 - Classifier - INFO - ALL correctly detected with confidence of 0.981 in 0.3316617012023926 seconds.
+2020-07-22 00:21:45,698 - Classifier - INFO - Loaded test image Model/Test/Im028_1.jpg
+2020-07-22 00:21:46,035 - Classifier - WARNING - ALL incorrectly not detected with LOW confidence of 0.6772 in 0.3321866989135742 seconds.
+2020-07-22 00:21:46,047 - Classifier - INFO - Loaded test image Model/Test/Im020_1.jpg
+2020-07-22 00:21:46,384 - Classifier - INFO - ALL correctly detected with LOW confidence of 0.5405 in 0.33107590675354004 seconds.
+2020-07-22 00:21:46,384 - Classifier - INFO - Testing ended. 19 correct, 1 incorrect, 7 low confidence: (6 correct, 1 incorrect)
+```
+**Server**
+```
+2020-07-22 00:18:02,152 - Client - INFO - Model/Test/Im063_1.jpg: ALL detected with a LOW confidence of 0.605 in 0.3804178237915039
+2020-07-22 00:18:09,643 - Client - INFO - Model/Test/Im053_1.jpg: ALL detected with a confidence of 0.9893 in 0.404649019241333
+2020-07-22 00:18:17,056 - Client - INFO - Model/Test/Im074_0.jpg: ALL not detected with a confidence of 0.9507 in 0.3337564468383789
+2020-07-22 00:18:24,474 - Client - INFO - Model/Test/Im088_0.jpg: ALL not detected with a confidence of 1.0 in 0.3340914249420166
+2020-07-22 00:18:31,889 - Client - INFO - Model/Test/Im069_0.jpg: ALL not detected with a confidence of 0.997 in 0.334122896194458
+2020-07-22 00:18:39,306 - Client - INFO - Model/Test/Im106_0.jpg: ALL not detected with a confidence of 0.995 in 0.3339042663574219
+2020-07-22 00:18:46,723 - Client - INFO - Model/Test/Im031_1.jpg: ALL detected with a LOW confidence of 0.596 in 0.332763671875
+2020-07-22 00:18:54,138 - Client - INFO - Model/Test/Im101_0.jpg: ALL not detected with a confidence of 0.995 in 0.33394384384155273
+2020-07-22 00:19:01,554 - Client - INFO - Model/Test/Im041_0.jpg: ALL not detected with a confidence of 0.998 in 0.33323001861572266
+2020-07-22 00:19:08,971 - Client - INFO - Model/Test/Im024_1.jpg: ALL detected with a LOW confidence of 0.51 in 0.3343958854675293
+2020-07-22 00:19:16,382 - Client - INFO - Model/Test/Im057_1.jpg: ALL detected with a confidence of 0.935 in 0.33320093154907227
+2020-07-22 00:19:23,789 - Client - INFO - Model/Test/Im047_0.jpg: ALL not detected with a confidence of 1.0 in 0.33370471000671387
+2020-07-22 00:19:31,203 - Client - INFO - Model/Test/Im060_1.jpg: ALL detected with a LOW confidence of 0.5815 in 0.3327455520629883
+2020-07-22 00:19:38,608 - Client - INFO - Model/Test/Im095_0.jpg: ALL not detected with a LOW confidence of 0.733 in 0.3334190845489502
+2020-07-22 00:19:46,025 - Client - INFO - Model/Test/Im035_0.jpg: ALL not detected with a confidence of 1.0 in 0.333467960357666
+2020-07-22 00:19:53,451 - Client - INFO - Model/Test/Im006_1.jpg: ALL detected with a confidence of 1.0 in 0.33263731002807617
+2020-07-22 00:20:00,860 - Client - INFO - Model/Test/Im099_0.jpg: ALL not detected with a confidence of 1.0 in 0.3327138423919678
+2020-07-22 00:20:08,276 - Client - INFO - Model/Test/Im026_1.jpg: ALL detected with a confidence of 0.981 in 0.3331906795501709
+2020-07-22 00:20:15,692 - Client - INFO - Model/Test/Im028_1.jpg: ALL not detected with a LOW confidence of 0.6772 in 0.3350038528442383
+2020-07-22 00:20:23,105 - Client - INFO - Model/Test/Im020_1.jpg: ALL detected with a LOW confidence of 0.5405 in 0.33272433280944824
 ```
 
 &nbsp;
