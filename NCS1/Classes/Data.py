@@ -13,12 +13,13 @@
 #
 ############################################################################################
 
-import glob, json, math, os, random, sys, time
+import cv2, glob, json, math, os, pathlib, random, sys, time 
 
 import numpy as np
 import tensorflow as tf
 
 from datetime import datetime
+from PIL import Image
 from sys import argv
 
 from Classes.Helpers import Helpers
@@ -182,6 +183,23 @@ class Data():
             'image/height': self.int64Feature(height),
             'image/width': self.int64Feature(width)
         }))
+
+    def cropTestDataset(self):
+        """ Crops the testing dataset. """
+        
+        data_dir = pathlib.Path(
+            self.confs["Classifier"]["TestImagePath"])
+        data = list(data_dir.glob('*.jpg'))
+        
+        for ipath in data:
+            fpath = str(ipath)
+            
+            image = Image.open(fpath)
+            
+            image = image.resize((600, 600))
+            image.save(fpath)
+
+        self.Helpers.logger.info("Test data resized.")
 
 
 class ImageReader(object):

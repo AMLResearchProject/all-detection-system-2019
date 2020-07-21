@@ -71,6 +71,14 @@ class Data():
         self.Helpers.logger.info(
             "Loading & preparing training data completed.")
 
+    def cropTestData(self):
+        """ Crops the testing data """
+        
+        self.DataProcess.cropTestDataset()
+
+        self.Helpers.logger.info(
+            "Testing data resized.")
+
 
 if __name__ == "__main__":
 
