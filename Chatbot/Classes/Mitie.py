@@ -1,34 +1,15 @@
 ############################################################################################
 #
-# The MIT License (MIT)
-# 
-# Acute Myeloid Leukemia Detection System 
-# Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# Project:       Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
+# Repository:    ALL Detection System 2019
+# Project:       Chatbot
 #
-# Title:         Acute Myeloid Leukemia Detection System MITIE Tools
-# Description:   MITIE functions for the Acute Myeloid Leukemia Detection System.
-# Configuration: required/confs.json
-# Last Modified: 2018-12-22
-#
-# Uses code from https://github.com/mit-nlp/MITIE
+# Author:        Adam Milton-Barker (AdamMiltonBarker.com)
+# Contributors:
+# Title:         MITIE Class
+# Description:   MITIE NER class for the ALL Detection System 2019 Chatbot.
+# License:       MIT License
+# Last Modified: 2020-07-15
 #
 ############################################################################################
  
@@ -38,64 +19,47 @@ parent = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(parent + '/../MITIE/mitielib')
 
 from nltk.stem.lancaster import LancasterStemmer
-from Classes.Helpers       import Helpers
-from mitie               import *
+from Classes.Helpers import Helpers
+from mitie import *
 
 class Entities():
+    """ ALL Detection System 2019 MITIE Class
+
+    MITIE NER class for the ALL Detection System 2019 Chatbot. 
+    """
     
     def __init__(self):
-
-        ###############################################################
-        #
-        # Sets up all default requirements
-        #
-        # - Helpers: Useful global functions
-        # - LancasterStemmer: Word stemmer
-        #
-        ###############################################################
+        """ Initializes the MITIE class. """
         
         self.Helpers = Helpers()
-        self._confs  = self.Helpers.loadConfigs()
-
         self.stemmer = LancasterStemmer()
         
     def restoreNER(self):
-
-        ###############################################################
-        #
-        # Restores the NER model, in this case MITIE
-        #
-        ###############################################################
+        """ Restores the NER model """
          
-        if os.path.exists(self._confs["NLU"]["EntitiesDat"]):
-            return named_entity_extractor(self._confs["NLU"]["EntitiesDat"])
+        if os.path.exists(self.Helpers.confs["NLU"]["EntitiesDat"]):
+            return named_entity_extractor(self.Helpers.confs["NLU"]["EntitiesDat"])
 
     def parseEntities(self, sentence, ner, trainingData):
+        """ Parses entities in intents/sentences """
 
-        ###############################################################
-        #
-        # Parses entities in intents/sentences
-        #
-        ###############################################################
-
-        entityHolder   = []
-        fallback       = False
+        entityHolder = []
+        fallback = False
         parsedSentence = sentence
-        parsed         = ""
+        parsed = ""
 
-        if os.path.exists(self._confs["NLU"]["EntitiesDat"]):
+        if os.path.exists(self.Helpers.confs["NLU"]["EntitiesDat"]):
 
-            tokens   = sentence.lower().split()
+            tokens = sentence.lower().split()
             entities = ner.extract_entities(tokens)
 
             for e in entities:
-
-                range     = e[0]
-                tag       = e[1]
-                score     = e[2]
+                range = e[0]
+                tag = e[1]
+                score = e[2]
                 scoreText = "{:0.3f}".format(score)
                 
-                if score > self._confs["NLU"]["Mitie"]["Threshold"]:
+                if score > self.Helpers.confs["NLU"]["Mitie"]["Threshold"]:
                     
                     parsed, fallback = self.replaceEntity(
                         " ".join(tokens[i] for i in range),
@@ -128,12 +92,7 @@ class Entities():
         return parsed, fallback, entityHolder, parsedSentence
         
     def replaceResponseEntities(self, response, entityHolder):
-
-        ###############################################################
-        #
-        # Replaces entities in responses
-        #
-        ###############################################################
+        """ Replaces entities in responses """
 
         entities = []
 
@@ -144,15 +103,10 @@ class Entities():
         return response, entities
 
     def replaceEntity(self, value, entity, trainingData):
-
-        ###############################################################
-        #
-        # Replaces entities/synonyms
-        #
-        ###############################################################
+        """ Replaces entities/synonyms """
 
         lowEntity = value.lower()
-        match     = True
+        match = True
 
         if "entitieSynonyms" in trainingData:
             for entities in trainingData["entitieSynonyms"]:
@@ -166,15 +120,10 @@ class Entities():
         return lowEntity, match 
 
     def trainEntities(self, mitiemLocation, trainingData):
-
-        ###############################################################
-        #
-        # Trains the NER model
-        #
-        ###############################################################
+        """ Trains the NER model """
         
-        trainer     = ner_trainer(mitiemLocation)
-        counter     = 0
+        trainer = ner_trainer(mitiemLocation)
+        counter = 0
         hasEnts = 0
 
         for intents in trainingData['intents']:
@@ -183,8 +132,8 @@ class Entities():
             for entity in intents['entities']:
 
                 hasEnts = 1
-                tokens  = trainingData['intents'][counter]["text"][i].lower().split()
-                data    = ner_training_instance(tokens)
+                tokens = trainingData['intents'][counter]["text"][i].lower().split()
+                data = ner_training_instance(tokens)
                 data.add_entity(
                     xrange(
                         entity["rangeFrom"],
@@ -198,4 +147,4 @@ class Entities():
         if hasEnts:
             trainer.num_threads = 4
             ner = trainer.train()
-            ner.save_to_disk(self._confs["NLU"]["EntitiesDat"])
+            ner.save_to_disk(self.Helpers.confs["NLU"]["EntitiesDat"])

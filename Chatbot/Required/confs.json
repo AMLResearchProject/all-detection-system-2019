@@ -1,15 +1,14 @@
 {
-    "aiCore":{
+    "System": {
         "Logs": "Logs/",
-        "FQDN": "",
         "IP": "",
-        "Port": 5824
-    }, 
-	"NLU":{
+        "Port": 8080
+    },
+    "NLU": {
         "Activation": "softmax",
         "Threshold": 0.5,
         "TFLearn": {
-            "Logs":"Model/TFLearn",
+            "Logs": "Model/TFLearn",
             "LogsLevel": 3,
             "Path": "Model/nlu.tflearn",
             "Data": "Model/model.json"
@@ -28,14 +27,12 @@
             "ModelLocation": "MITIE/MITIE-models/english/total_word_feature_extractor.dat"
         },
         "defaultResponses": [
-                "Sorry, I did not understand you",
-                "Sorry, could you rephrase"
+            "Sorry, I did not understand you",
+            "Sorry, could you rephrase"
         ],
-        "repetition": [
-            {
-                "ignoreCount": 5,
-                "ignoreReset": 60
-            }
-        ]
-	}
-}  
+        "repetition": [{
+            "ignoreCount": 5,
+            "ignoreReset": 60
+        }]
+    }
+}

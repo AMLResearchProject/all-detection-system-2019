@@ -1,205 +1,204 @@
 {
-      "intents": [
-            {
-                  "intent": "Hello",
-                  "text": [
-                        "Bon dia",
-                        "Buenas dias",
-                        "Bonjour",
-                        "Hi",
-                        "Hello",
-                        "Hola",
-                        "Yo"
-                  ],
-                  "responses": [
-                        "Hi",
-                        "Hello",
-                        "Hola"
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+    "intents": [{
+            "intent": "Hello",
+            "text": [
+                "Bon dia",
+                "Buenas dias",
+                "Bonjour",
+                "Hi",
+                "Hello",
+                "Hola",
+                "Yo"
+            ],
+            "responses": [
+                "Hi",
+                "Hello",
+                "Hola"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
             },
-            {
-                  "intent": "WhatIsAML",
-                  "text": [
-                        "What is AML",
-                        "Tell me what AML is",
-                        "What is Acute Myeloid Leukemia",
-                        "Tell me what Acute Myeloid Leukemia is",
-                        "Can you tell me what AML is",
-                        "Can you tell me what Acute Myeloid Leukemia is",
-                        "Will you tell me what Acute Myeloid Leukemia is"
-                  ],
-                  "responses": [
-                        "Acute Myeloid Leukemia, or AML, is a rare form of Leukemia where mutated white blood cells attack and kill healthy red cells.",
-                        "Acute Myeloid Leukemia, or AML, is a rare and agressive form of Leukemia. With AML, mutated white blood cells attack and kill healthy red cells.",
-                        "Acute Myeloid Leukemia, or AML, is a rare and agressive form of Leukemia. With AML, mutated white blood cells kill healthy red cells."
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
             },
-            {
-                  "intent": "AMLAge",
-                  "text": [
-                        "Who does AML affect?",
-                        "Who does Acute Myeloid Leukemia affect?",
-                        "What age group does AML affect?",
-                        "What age group does Acute Myeloid Leukemia affect?",
-                        "How old do you have to be to get AML?",
-                        "How old do you have to be to get Acute Myeloid Leukemia?",
-                        "Does Acute Myeloid Leukemia affect older or younger people?"
-                  ],
-                  "responses": [
-                        "According to cancer.org, AML is generally a disease of older people and is uncommon before the age of 45. The average age of people when they are first diagnosed with AML is about 68. But AML can occur in children as well."
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "WhatIsAML",
+            "text": [
+                "What is AML?",
+                "Tell me what AML is",
+                "What is Acute Myeloid Leukemia?",
+                "Tell me what Acute Myeloid Leukemia is",
+                "Can you tell me what AML is?",
+                "Can you tell me what Acute Myeloid Leukemia is?",
+                "Will you tell me what Acute Myeloid Leukemia is?"
+            ],
+            "responses": [
+                "Acute Myeloid Leukemia, or AML, is a rare form of Leukemia where mutated white blood cells attack and kill healthy red cells.",
+                "Acute Myeloid Leukemia, or AML, is a rare and agressive form of Leukemia. With AML, mutated white blood cells attack and kill healthy red cells.",
+                "Acute Myeloid Leukemia, or AML, is a rare and agressive form of Leukemia. With AML, mutated white blood cells kill healthy red cells."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
             },
-            {
-                  "intent": "WhatIsAMLDetectionSystem",
-                  "text": [
-                        "Tell me about the AML Detection System",
-                        "Tell me about the Acute Myeloid Leukemia Detection System",
-                        "Can you tell me more about AML Detection System",
-                        "Can you tell me more about Acute Myeloid Leukemia Detection System",
-                        "What is the AML Detection System?",
-                        "What is the Acute Myeloid Leukemia Detection System?",
-                        "Will you tell me more about what the Acute Myeloid Leukemia Detection System is"
-                  ],
-                  "responses": [
-                        "The AML (Acute Myeloid Leukemia) Detection System is an open source Acute Myeloid Leukemia Detection System including data management, training and running facial and image classifiers on the edge with Intel technologies. The project includes an Android chatbot app, a natural language understanding engine, a convolutional neural network classifier, a siamese neural network classifier and  a locally hosted web based UI. This project is part of the Peter Moss Acute Myeloid Leukemia AI Research Project."
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
             },
-            {
-                  "intent": "WhatIsAMLAIResearchProject",
-                  "text": [
-                        "Tell me about the Peter Moss AML AI Research Project",
-                        "Tell me about the Peter Moss Acute Myeloid Leukemia Detection AI Research Project",
-                        "Can you tell me more about the AML AI Research Project",
-                        "Can you tell me more about the Acute Myeloid Leukemia Detection AI Research Project",
-                        "What is the AML AI Research Project?",
-                        "What is the Acute Myeloid Leukemia Detection AI Research Project?",
-                        "Will you tell me more about what the Acute Myeloid Leukemia Detection AI Research Project is"
-                  ],
-                  "responses": [
-                        "The Acute Myeloid Leukemia AI Research Project is an open source project researching and developing Artificial Intelligence for early detection of AML and for drug discovery."
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "AMLAge",
+            "text": [
+                "Who does AML affect?",
+                "Who does Acute Myeloid Leukemia affect?",
+                "What age group does AML affect?",
+                "What age group does Acute Myeloid Leukemia affect?",
+                "How old do you have to be to get AML?",
+                "How old do you have to be to get Acute Myeloid Leukemia?",
+                "Does Acute Myeloid Leukemia affect older or younger people?"
+            ],
+            "responses": [
+                "According to cancer.org, AML is generally a disease of older people and is uncommon before the age of 45. The average age of people when they are first diagnosed with AML is about 68. But AML can occur in children as well."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
             },
-            {
-                  "intent": "ThankYou",
-                  "text": [
-                        "Thanks",
-                        "OK thanks",
-                        "Oh thanks",
-                        "Thank you",
-                        "OK thank you",
-                        "Oh thank you",
-                        "Thanks to you"
-                  ],
-                  "responses": [
-                        "No problem!",
-                        "Not a problem!",
-                        "It's no problem!",
-                        "You are welcome, any time!",
-                        "You are definitely welcome, any time!",
-                        "Glad I could help!",
-                        "No problem! Glad I could help!"
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
             },
-            {
-                  "intent": "Goodbye",
-                  "text": [
-                        "Goodbye",
-                        "Good bye",
-                        "Adios",
-                        "Adios amigo",
-                        "Au revoir",
-                        "I'll be back",
-                        "Laters"
-                  ],
-                  "responses": [
-                        "Good bye",
-                        "Adios",
-                        "See you later"
-                  ],
-                  "extension":  {
-                        "function": "",
-                        "entities": false,
-                        "responses": []
-                  },
-                  "context":  {
-                        "in": "",
-                        "out": "",
-                        "clear": false
-                  },
-                  "entityType": "NA",
-                  "entities": []
-            }
-      ]
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "WhatIsAMLDetectionSystem",
+            "text": [
+                "Tell me about the ALL Detection System",
+                "Tell me about the Acute Lymphoblastic Leukemia Detection System",
+                "Can you tell me more about ALL Detection System?",
+                "Can you tell me more about Acute Lymphoblastic Leukemia Detection System?",
+                "What is the ALL Detection System?",
+                "What is the Acute Lymphoblastic Leukemia Detection System?",
+                "Will you tell me more about what the Acute Lymphoblastic Leukemia Detection System is?"
+            ],
+            "responses": [
+                "The Acute Lymphoblastic Leukemia (ALL) Detection System is an open source project including data management, training and running facial and image classifiers on the edge with Intel technologies. The project includes a natural language understanding engine, a convolutional neural network classifier, a siamese neural network classifier and a locally hosted web based UI. This project is part of the Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project, a Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss research project."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "WhatIsAMLAIResearchProject",
+            "text": [
+                "Tell me about the Peter Moss AML AI Research Project",
+                "Tell me about the Peter Moss Acute Myeloid Leukemia AI Research Project",
+                "Can you tell me more about the AML AI Research Project?",
+                "Can you tell me more about the Acute Myeloid Leukemia AI Research Project?",
+                "What is the AML AI Research Project?",
+                "What is the Acute Myeloid Leukemia AI Research Project?",
+                "Will you tell me more about what the Acute Myeloid Leukemia AI Research Project is"
+            ],
+            "responses": [
+                "The Acute Myeloid & Lymphoblastic Leukemia AI Research Project is a research project within Peter Moss Leukemia AI Research Association (Asociacion De Investigacion En Inteligencia Artificial Para La Leucemia Peter Moss). The research project focuses on developing Artificial Intelligence for early detection of Acute Myeloid & Lymphoblastic Leukemia."
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "ThankYou",
+            "text": [
+                "Thanks",
+                "OK thanks",
+                "Oh thanks",
+                "Thank you",
+                "OK thank you",
+                "Oh thank you",
+                "Thanks to you"
+            ],
+            "responses": [
+                "No problem!",
+                "Not a problem!",
+                "It's no problem!",
+                "You are welcome, any time!",
+                "You are definitely welcome, any time!",
+                "Glad I could help!",
+                "No problem! Glad I could help!"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        },
+        {
+            "intent": "Goodbye",
+            "text": [
+                "Goodbye",
+                "Good bye",
+                "Adios",
+                "Adios amigo",
+                "Au revoir",
+                "I'll be back",
+                "Laters"
+            ],
+            "responses": [
+                "Good bye",
+                "Adios",
+                "See you later"
+            ],
+            "extension": {
+                "function": "",
+                "entities": false,
+                "responses": []
+            },
+            "context": {
+                "in": "",
+                "out": "",
+                "clear": false
+            },
+            "entityType": "NA",
+            "entities": []
+        }
+    ]
 }
