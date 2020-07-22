@@ -1,70 +1,41 @@
 ############################################################################################
 #
-# The MIT License (MIT)
-# 
-# Acute Myeloid Leukemia Detection System 
-# Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# Project:       Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
+# Repository:    ALL Detection System 2019
+# Project:       Chatbot
 #
-# Title:         Acute Myeloid Leukemia Detection System Data Tools
-# Description:   Data functions for the Acute Myeloid Leukemia Detection System.
-# Configuration: required/confs.json
-# Last Modified: 2018-12-22
+# Author:        Adam Milton-Barker (AdamMiltonBarker.com)
+# Contributors:
+# Title:         Data Class
+# Description:   Data class for the ALL Detection System 2019 Chatbot.
+# License:       MIT License
+# Last Modified: 2020-07-15
 #
 ############################################################################################
 
 import json, random, nltk, numpy as np 
 
 from nltk.stem.lancaster import LancasterStemmer
-from Classes.Helpers       import Helpers
+from Classes.Helpers import Helpers
 
 class Data():
+    """ ALL Detection System 2019 Data Class
+
+    Data class for the ALL Detection System 2019 Chatbot. 
+    """
 
     def __init__(self):
-
-        ###############################################################
-        #
-        # Sets up all default requirements and placeholders 
-        # needed for the NLU engine to run. 
-        #
-        # - Helpers: Useful global functions
-        # - Logging: Logging class
-        # - LancasterStemmer: Word stemmer
-        #
-        ###############################################################
+        """ Initializes the Data class. """
         
         self.ignore  = [',','.','!','?']
         
         self.Helpers = Helpers()
-        self.confs  = self.Helpers.loadConfigs()
-        self.LogFile = self.Helpers.setLogFile(self.confs["aiCore"]["Logs"]+"JumpWay/")
+        self.LogFile = self.Helpers.setLogFile(self.Helpers.confs["System"]["Logs"]+"JumpWay/")
         
         self.LancasterStemmer = LancasterStemmer()
             
     def loadTrainingData(self):
-
-        ###############################################################
-        #
-        # Loads the NLU and NER training data from Model/Data/training.json
-        #
-        ###############################################################
+        """ Loads the NLU and NER training data from Model/Data/training.json """
 
         with open("Model/Data/training.json") as jsonData:
             trainingData = json.load(jsonData)
@@ -78,12 +49,7 @@ class Data():
         return trainingData
 
     def loadTrainedData(self):
-
-        ###############################################################
-        #
-        # Loads the saved training configuratuon
-        #
-        ###############################################################
+        """ Loads the saved training configuratuon """
     
         with open("Model/model.json") as jsonData:
             modelData = json.load(jsonData)
@@ -97,44 +63,36 @@ class Data():
         return modelData
             
     def sortList(self, listToSort):
-
-        ###############################################################
-        #
-        # Sorts a list by sorting the list, and removing duplicates 
-        # 
-        # https://www.programiz.com/python-programming/methods/built-in/sorted 
-        # https://www.programiz.com/python-programming/list
-        # https://www.programiz.com/python-programming/set
-        #
-        ###############################################################
+        """ Sorts a list by sorting the list, and removing duplicates 
+        
+        More Info:
+        https://www.programiz.com/python-programming/methods/built-in/sorted 
+        https://www.programiz.com/python-programming/list
+        https://www.programiz.com/python-programming/set
+        """
 
         return sorted(list(set(listToSort)))
         
     def extract(self, data=None, splitIt=False):
-
-        ###############################################################
-        #
-        # Extracts words from sentences, stripping out characters in 
-        # the ignore list above
-        # 
-        # https://www.nltk.org/_modules/nltk/stem/lancaster.html
-        # http://insightsbot.com/blog/R8fu5/bag-of-words-algorithm-in-python-introduction
-        #
-        ###############################################################
+        """ Extracts words from sentences  
+        
+        More Info:
+        https://www.nltk.org/_modules/nltk/stem/lancaster.html
+        http://insightsbot.com/blog/R8fu5/bag-of-words-algorithm-in-python-introduction
+        """
         
         return [self.LancasterStemmer.stem(word) for word in (data.split() if splitIt == True else data) if word not in self.ignore]
 
     def makeBagOfWords(self, sInput, words):
-
-        ###############################################################
-        #
-        # Makes a bag of words used by the inference and training 
-        # features. If makeBagOfWords is called during training, sInput 
-        # will be a list.
-        # 
-        # http://insightsbot.com/blog/R8fu5/bag-of-words-algorithm-in-python-introduction
-        #
-        ###############################################################
+        """ Makes a bag of words  
+        
+        Makes a bag of words used by the inference and training 
+        features. If makeBagOfWords is called during training, sInput 
+        will be a list.
+         
+        More Info:
+        http://insightsbot.com/blog/R8fu5/bag-of-words-algorithm-in-python-introduction
+        """
         
         if type(sInput) == list:
             bagOfWords = []
@@ -153,24 +111,20 @@ class Data():
             return np.array(bagOfWords)
 
     def prepareClasses(self, intent, classes):
-
-        ###############################################################
-        #
-        # Adds an intent key to classes if it does not already exist
-        #
-        ###############################################################
+        """ Prepares classes 
+        
+        Adds an intent key to classes if it does not already exist
+        """
 
         if intent not in classes: classes.append(intent)
         return classes
         
     def prepareData(self, trainingData = [], wordsHldr = [], dataCorpusHldr = [], classesHldr = []):
-
-        ###############################################################
-        #
-        # Prepares the NLU and NER training data, loops through the 
-        # intents from our dataset, converts any entities / synoynms  
-        #
-        ###############################################################
+        """ Prepares date 
+        
+        Prepares the NLU and NER training data, loops through the 
+        intents from our dataset, converts any entities / synoynms  
+        """
 
         counter   = 0
         intentMap = {}
@@ -199,12 +153,7 @@ class Data():
         return self.sortList(self.extract(wordsHldr, False)), self.sortList(classesHldr), dataCorpusHldr, intentMap
         
     def finaliseData(self, classes, dataCorpus, words):
-
-        ###############################################################
-        #
-        # Finalises the NLU training data 
-        #
-        ###############################################################
+        """ Finalises the NLU training data  """
 
         trainData = []
         out = np.zeros(len(classes))

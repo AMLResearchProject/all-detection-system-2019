@@ -1,109 +1,62 @@
 ############################################################################################
 #
-# The MIT License (MIT)
-# 
-# Acute Myeloid Leukemia Detection System 
-# Copyright (C) 2018 Adam Milton-Barker (AdamMiltonBarker.com)
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
+# Project:       Peter Moss Acute Myeloid & Lymphoblastic Leukemia AI Research Project
+# Repository:    ALL Detection System 2019
+# Project:       Chatbot
 #
-# Title:         Acute Myeloid Leukemia Detection System Context Tools
-# Description:   Context functions for the Acute Myeloid Leukemia Detection System.
-# Configuration: required/confs.json
-# Last Modified: 2018-12-22
+# Author:        Adam Milton-Barker (AdamMiltonBarker.com)
+# Contributors:
+# Title:         Context Class
+# Description:   Context class for the ALL Detection System 2019 Chatbot.
+# License:       MIT License
+# Last Modified: 2020-07-15
 #
 ############################################################################################
 
 class Context():
-	
-	def __init__(self):
-		
-		###############################################################
-		#
-		# Nothing to do
-		#
-		###############################################################
-		pass
-		
-	def setContexts(self, theIntent, session):
-		
-		###############################################################
-		#
-		# Sets all contexts
-		#
-		###############################################################
+    """ ALL Detection System 2019 Context Class
 
-		contextIn  = self.setContextIn(theIntent)
-		contextOut = self.setContextOut(theIntent)
-		context    = self.getCurrentContext(session)
+    Context class for the ALL Detection System 2019 Chatbot. 
+    """
+    
+    def __init__(self):
+        """ Initializes the Context class. """
+        
+        pass
+        
+    def setContexts(self, theIntent, session):
+        """ Sets all contexts. """
 
-		return contextIn, contextOut, context
+        contextIn  = self.setContextIn(theIntent)
+        contextOut = self.setContextOut(theIntent)
+        context    = self.getCurrentContext(session)
 
-	def setContextIn(self, intent):
+        return contextIn, contextOut, context
 
-		###############################################################
-		#
-		# Sets the current context in
-		#
-		###############################################################
+    def setContextIn(self, intent):
+        """ Sets the current context in. """
 
-		return intent["context"]["in"] if intent["context"]["in"] != "" else ""
+        return intent["context"]["in"] if intent["context"]["in"] != "" else ""
 
-	def setContextOut(self, intent):
+    def setContextOut(self, intent):
+        """ Sets the current context out. """
+        
+        return intent["context"]["out"] if intent["context"]["out"] != "" else ""
 
-		###############################################################
-		#
-		# Sets the current context out
-		#
-		###############################################################
+    def checkSessionContext(self, session, intent):
+        """ Checks the current context session. """
+        
+        if("context" in session and intent["context"]["in"] == session["context"]): 
+            return True 
+        else: 
+            return False
 
-		return intent["context"]["out"] if intent["context"]["out"] != "" else ""
+    def checkClearContext(self, intent, override=0):
+        """ Checks if we are to clear the current context. """
 
-	def checkSessionContext(self, session, intent):
+        return True if intent["context"]["clear"] == True or override == 1 else False
 
-		###############################################################
-		#
-		# Checks the current context session
-		#
-		###############################################################
-		
-		if("context" in session and intent["context"]["in"] == session["context"]): 
-			return True 
-		else: 
-			return False
+    def getCurrentContext(self, session):
+        """ Gets the current context. """
 
-	def checkClearContext(self, intent, override=0):
-
-		###############################################################
-		#
-		# Checks if we are to clear the current context
-		#
-		###############################################################
-
-		return True if intent["context"]["clear"] == True or override == 1 else False
-
-	def getCurrentContext(self, session):
-
-		###############################################################
-		#
-		# Gets the current context
-		#
-		###############################################################
-
-		return session["context"] if "context" in session else "NA"
+        return session["context"] if "context" in session else "NA"
