@@ -1,0 +1,45 @@
+.clear {
+  clear: both;
+}
+
+.formError {
+  color: #ffffff !important;
+  background-color: #ff0000 !important;
+}
+
+.hide {
+  display: none;
+}
+
+h1.page-header {
+  color: #fff !important;
+}
+
+.coreButtons {
+  padding: 25px;
+  text-align: center;
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.coreButtons:hover {
+  text-decoration: none;
+}
+
+.cDisplay {
+  color: #fff;
+  font-size: 50px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+  padding-top: 15%;
+  padding-left: 5%;
+}
+
+.dDisplay {
+  color: #fff;
+  font-size: 25px;
+  font-family: Orbitron;
+  letter-spacing: 7px;
+  padding-left: 5%;
+}
