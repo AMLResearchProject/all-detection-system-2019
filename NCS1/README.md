@@ -9,6 +9,7 @@
 # Table Of Contents
 
 - [Introduction](#introduction)
+- [DISCLAIMER](#disclaimer)
 - [Acute Myeloid Leukemia (AML)](#acute-myeloid-leukemia-aml)
 - [Acute Lymphoblastic Leukemia (ALL)](#acute-myeloid-leukemia-aml)
 - [Acute Lymphoblastic Leukemia Image Database for Image Processing (ALL-IDB)](#acute-lymphoblastic-leukemia-image-database-for-image-processing-all-idb)
@@ -56,6 +57,17 @@ This tutorial allows you to train a CNN locally on CPU/GPU or on Intel AI DevClo
 The Tensorflow model is trained and then converted to a format compatible with the Movidius NCS1 by freezing the Tensorflow model and then running it through the NCSDK compiler. In this project I use an an UP Squared and the NCS1 for inference, but you can use any device that is running Ubuntu 16.04 or 18.04.
 
 This classifier is an upgrade to the classifier previously built for the sister project, [Invasive Ductal Carcinoma Classifier](https://www.breastcancerai.com/).
+
+&nbsp;
+
+# DISCLAIMER
+This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support systems such as diagnosis systems.
+
+Although the classifier is accurate and shows good results both on paper and in real world testing, it is not meant to be an alternative to professional medical diagnosis.
+
+Developers that have contributed to this repository have experience in using Artificial Intelligence for detecting certain types of cancer. They are not a doctors, medical or cancer experts.
+
+Please use these systems responsibly.
 
 &nbsp;
 

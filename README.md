@@ -11,6 +11,7 @@
 # Table Of Contents
 
 - [Introduction](#introduction)
+- [DISCLAIMER](#disclaimer)
 - [Intel® DevMesh AI Spotlight Award](#intel-devmesh-ai-spotlight-award)
 - [Projects](#projects)
 - [Intel® Technologies](#Intel®-technologies)
@@ -28,6 +29,17 @@
 The Peter Moss Acute Myeloid & Lymphoblastic Leukemia Detection System is an opensource classifier with a locally hosted, database driven UI for data management, training, and running inference on Convolutional Neural Networks on the edge. This project was our official demo for 2019 and leverages Intel® technologies such as the UP2/UP2 AI Vision Dev Kit and Movidius NCS.
 
 This project is made up of a number of components which work together to provide a locally hosted management system. Follow the completed tutorials below in the provided order. A full system setup requires [Server](Server "Server"), [Facial-Auth](Facial-Auth "Facial-Auth"), [Data Augmentation](Augmentation "Data Augmentation"), [NCS1 Tensorflow Classifier](NCS1/ "NCS1 Tensorflow Classifier"), and [Chatbot](Chatbot "Chatbot").
+
+&nbsp;
+
+# DISCLAIMER
+This project should be used for research purposes only. The purpose of the project is to show the potential of Artificial Intelligence for medical support systems such as diagnosis systems.
+
+Although the classifier is accurate and shows good results both on paper and in real world testing, it is not meant to be an alternative to professional medical diagnosis.
+
+Developers that have contributed to this repository have experience in using Artificial Intelligence for detecting certain types of cancer. They are not a doctors, medical or cancer experts.
+
+Please use these systems responsibly.
 
 &nbsp;
 
