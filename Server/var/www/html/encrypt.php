@@ -6,10 +6,10 @@ $pageDetails = [
 
 include dirname(__FILE__) . '/../Classes/Core/init.php';
 
-$domainString = "http://192.168.1.34";
-$jumpwayAppID = 72;
-$JumpWayAppPublic = "6S06fWaSgCS759F0w7298524qWbQC2";
-$JumpWayAppSecret = "VnQBt5dDEu4du971ZE0Nl5z92Z4ewoc7L8I";
+$domainString = "";
+$jumpwayAppID = 0;
+$JumpWayAppPublic = "";
+$JumpWayAppSecret = "";
 
 $encypted = [];
 
